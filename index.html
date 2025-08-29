@@ -8,14 +8,24 @@
   <link rel="icon" href="data:,">
   <style>
     :root { --bg:#0b0b0b; --card:#161616; --text:#fff; --muted:#b9b9b9; --brand:#ff7a3d; }
-    *{box-sizing:border-box} body{margin:0;font:16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:linear-gradient(#0b0b0b,#111);}
-    .wrap{max-width:860px;margin:0 auto;padding:32px 20px}
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:linear-gradient(#0b0b0b,#111)}
+    a{color:#ffd3bf;text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:32px 20px}
     header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
     .logo{font-weight:700;letter-spacing:.3px}
     .badge{background:rgba(255,122,61,.15);color:#ffd3bf;padding:6px 10px;border-radius:999px;font-size:12px}
-    .hero{display:grid;gap:16px;margin:36px 0}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;margin:36px 0}
     .title{font-size:42px;line-height:1.1;margin:0}
     .muted{color:var(--muted)}
+    .hero-visual{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.06);background:
+      radial-gradient(120% 120% at 0% 0%, rgba(255,122,61,.15), transparent 60%),
+      #0f0f0f}
+    .hero-visual img{display:block;width:100%;height:auto}
+
+    /* Contact card */
     .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
     form{display:grid;gap:12px}
     label{font-weight:600}
@@ -23,9 +33,18 @@
     textarea{min-height:120px;resize:vertical}
     button{background:var(--brand);border:none;color:#000;font-weight:700;cursor:pointer}
     button:hover{filter:brightness(1.06)}
-    footer{margin:36px 0;color:var(--muted);font-size:14px}
     .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-    @media (max-width:640px){ .title{font-size:32px} .row{grid-template-columns:1fr} }
+
+    footer{margin:36px 0;color:var(--muted);font-size:14px}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .title{font-size:34px}
+    }
+    @media (max-width:640px){
+      .row{grid-template-columns:1fr}
+      .title{font-size:30px}
+    }
   </style>
 </head>
 <body>
@@ -35,16 +54,31 @@
       <span class="badge">Progress made easy</span>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
-      <h1 class="title">A simple strength tracker that just works.</h1>
-      <p class="muted">No ads. No fluff. Plan, lift, and progress.</p>
+      <div>
+        <h1 class="title">A simple strength tracker that just works.</h1>
+        <p class="muted">No ads. No fluff. Plan, lift, and progress.</p>
+        <!-- Optional CTA row
+        <p style="margin-top:14px">
+          <a href="#" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:10px 14px;border-radius:12px;color:#fff">
+            Join TestFlight
+          </a>
+        </p>
+        -->
+      </div>
+      <div class="hero-visual">
+        <!-- Put hero.png (and optionally hero@2x.png) next to index.html -->
+        <img src="hero.png" srcset="hero.png 1x, hero@2x.png 2x" alt="LiftForge app screenshot">
+      </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="card">
       <h2 style="margin-top:0">Contact</h2>
       <p class="muted" style="margin-top:-4px">Questions or feedback? Send us a message.</p>
 
-      <form action="https://formspree.io/f/mbladqen" method="POST">
+      <form id="contact-form" action="https://formspree.io/f/mbladqen" method="POST">
         <div class="row">
           <div>
             <label for="name">Name</label>
@@ -71,7 +105,7 @@
     </section>
 
     <footer>
-      © <span id="y"></span> LiftForge • <a href="mailto:hello@liftforge.app" style="color:#ffd3bf">hello@liftforge.app</a>
+      © <span id="y"></span> LiftForge • <a href="mailto:hello@liftforge.app">hello@liftforge.app</a>
       <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
     </footer>
   </div>
