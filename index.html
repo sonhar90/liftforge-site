@@ -1,9 +1,10 @@
-cat > index.html <<'HTML'
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <meta name="format-detection" content="telephone=no" />
   <title>LiftForge — Progress made easy</title>
   <meta name="description" content="LiftForge is a simple strength tracker with Standard 5×5, custom plans, smart rest timer, and clean design. Progress made easy." />
   <link rel="canonical" href="https://liftforge.app/" />
@@ -17,23 +18,45 @@ cat > index.html <<'HTML'
   <style>
     :root { color-scheme: light dark; --bg:#0b0b0c; --fg:#f5f5f7; --muted:#9aa0a6; --accent:#ff7a45; }
     *{box-sizing:border-box} html,body{height:100%}
-    body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-         background:linear-gradient(180deg,#0b0b0c,#141416); color:var(--fg); display:flex; align-items:center; justify-content:center;}
-    .wrap{max-width:920px; padding:32px; width:100%}
+    body{
+      margin:0;
+      font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:linear-gradient(180deg,#0b0b0c,#141416);
+      color:var(--fg);
+      -webkit-text-size-adjust:100%;
+    }
+    a{color:#ffd9cc;text-decoration:none}
+    .wrap{max-width:920px; padding:32px; width:100%; margin:0 auto}
     header{display:flex; justify-content:space-between; align-items:center; margin-bottom:28px}
     .brand{font-weight:700; letter-spacing:.3px}
     .muted{color:var(--muted)}
+    /* Hero */
     .hero{display:grid; gap:18px; padding:36px; border-radius:20px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06)}
     h1{font-size:clamp(28px,4vw,44px); line-height:1.1; margin:0}
     .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,122,69,.12); color:#ffd9cc; font-weight:600; font-size:13px}
     .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px}
-    .btn{padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); text-decoration:none; color:var(--fg); font-weight:600}
+    .btn{padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); color:var(--fg); font-weight:600; display:inline-block}
     .btn.primary{background:var(--accent); border-color:var(--accent); color:#1b1b1c}
     .grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:12px}
     .card{padding:14px;border-radius:14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); min-height:88px}
+    /* Contact */
+    .card.contact{margin-top:22px}
+    form{display:grid; gap:12px}
+    label{font-weight:600}
+    input,textarea,button{
+      width:100%;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:#0f0f10; color:#fff;
+      padding:12px 14px;
+      -webkit-appearance:none; appearance:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    button{background:var(--accent); border:none; color:#1b1b1c; font-weight:700; cursor:pointer}
+    button:hover{filter:brightness(1.06)}
+    .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
     footer{margin-top:20px; display:flex; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:14px}
-    a{color:#ffd9cc}
-    @media (max-width:780px){ .grid{grid-template-columns:1fr} .hero{padding:24px} }
+    @media (max-width:780px){ .grid{grid-template-columns:1fr} .hero{padding:24px} .row{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -41,7 +64,7 @@ cat > index.html <<'HTML'
     <header>
       <div class="brand">LiftForge</div>
       <nav class="muted">
-        <a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a> • <a href="mailto:support@liftforge.app">Support</a>
+        <a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a> • <a href="#contact">Support</a>
       </nav>
     </header>
 
@@ -50,8 +73,9 @@ cat > index.html <<'HTML'
       <h1>Simple strength tracking that stays out of your way.</h1>
       <p class="muted">Standard 5×5 or build your own week. Clean UI, smart rest timer, and quick logging.</p>
       <div class="cta">
+        <!-- Replace # with your real TestFlight public link when ready -->
         <a class="btn primary" href="#" id="testflight">Join TestFlight</a>
-        <a class="btn" href="mailto:support@liftforge.app">Contact</a>
+        <a class="btn" href="#contact">Contact</a>
       </div>
 
       <div class="grid">
@@ -61,6 +85,37 @@ cat > index.html <<'HTML'
       </div>
     </section>
 
+    <!-- CONTACT -->
+    <section id="contact" class="card contact">
+      <h2 style="margin:0 0 4px 0">Contact</h2>
+      <p class="muted" style="margin-top:0">Questions or feedback? Send us a message.</p>
+
+      <form action="https://formspree.io/f/mbladqen" method="POST">
+        <div class="row">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" autocomplete="name" placeholder="Your name">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" placeholder="you@email.com" required>
+          </div>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
+        </div>
+
+        <!-- Extras -->
+        <input type="hidden" name="_subject" value="LiftForge contact">
+        <input type="hidden" name="_redirect" value="https://liftforge.app/thanks.html">
+        <input type="text" name="_gotcha" style="display:none">
+
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
     <footer>
       © <span id="y"></span> LiftForge • Made for lifters
     </footer>
@@ -68,4 +123,3 @@ cat > index.html <<'HTML'
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-HTML
