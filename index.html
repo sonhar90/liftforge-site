@@ -1,113 +1,71 @@
+cat > index.html <<'HTML'
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LiftForge — Progress made easy</title>
-  <meta name="description" content="LiftForge — simple strength training tracker. Progress made easy.">
-  <link rel="icon" href="data:,">
+  <meta name="description" content="LiftForge is a simple strength tracker with Standard 5×5, custom plans, smart rest timer, and clean design. Progress made easy." />
+  <link rel="canonical" href="https://liftforge.app/" />
+  <meta property="og:title" content="LiftForge — Progress made easy" />
+  <meta property="og:description" content="A clean, fast strength tracker. Standard 5×5 or build-your-own." />
+  <meta property="og:image" content="https://liftforge.app/og.png" />
+  <meta property="og:url" content="https://liftforge.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <style>
-    :root { --bg:#0b0b0b; --card:#161616; --text:#fff; --muted:#b9b9b9; --brand:#ff7a3d; }
-    *{box-sizing:border-box}
-    body{margin:0;font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:linear-gradient(#0b0b0b,#111)}
-    a{color:#ffd3bf;text-decoration:none}
-    .wrap{max-width:980px;margin:0 auto;padding:32px 20px}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
-    .logo{font-weight:700;letter-spacing:.3px}
-    .badge{background:rgba(255,122,61,.15);color:#ffd3bf;padding:6px 10px;border-radius:999px;font-size:12px}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;margin:36px 0}
-    .title{font-size:42px;line-height:1.1;margin:0}
+    :root { color-scheme: light dark; --bg:#0b0b0c; --fg:#f5f5f7; --muted:#9aa0a6; --accent:#ff7a45; }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+         background:linear-gradient(180deg,#0b0b0c,#141416); color:var(--fg); display:flex; align-items:center; justify-content:center;}
+    .wrap{max-width:920px; padding:32px; width:100%}
+    header{display:flex; justify-content:space-between; align-items:center; margin-bottom:28px}
+    .brand{font-weight:700; letter-spacing:.3px}
     .muted{color:var(--muted)}
-    .hero-visual{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.06);background:
-      radial-gradient(120% 120% at 0% 0%, rgba(255,122,61,.15), transparent 60%),
-      #0f0f0f}
-    .hero-visual img{display:block;width:100%;height:auto}
-
-    /* Contact card */
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
-    form{display:grid;gap:12px}
-    label{font-weight:600}
-    input,textarea,button{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:#0f0f0f;color:#fff;padding:12px 14px}
-    textarea{min-height:120px;resize:vertical}
-    button{background:var(--brand);border:none;color:#000;font-weight:700;cursor:pointer}
-    button:hover{filter:brightness(1.06)}
-    .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-
-    footer{margin:36px 0;color:var(--muted);font-size:14px}
-
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .title{font-size:34px}
-    }
-    @media (max-width:640px){
-      .row{grid-template-columns:1fr}
-      .title{font-size:30px}
-    }
+    .hero{display:grid; gap:18px; padding:36px; border-radius:20px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06)}
+    h1{font-size:clamp(28px,4vw,44px); line-height:1.1; margin:0}
+    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,122,69,.12); color:#ffd9cc; font-weight:600; font-size:13px}
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px}
+    .btn{padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); text-decoration:none; color:var(--fg); font-weight:600}
+    .btn.primary{background:var(--accent); border-color:var(--accent); color:#1b1b1c}
+    .grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:12px}
+    .card{padding:14px;border-radius:14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); min-height:88px}
+    footer{margin-top:20px; display:flex; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:14px}
+    a{color:#ffd9cc}
+    @media (max-width:780px){ .grid{grid-template-columns:1fr} .hero{padding:24px} }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="logo">LiftForge</div>
-      <span class="badge">Progress made easy</span>
+      <div class="brand">LiftForge</div>
+      <nav class="muted">
+        <a href="/privacy.html">Privacy</a> • <a href="/terms.html">Terms</a> • <a href="mailto:support@liftforge.app">Support</a>
+      </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
-      <div>
-        <h1 class="title">A simple strength tracker that just works.</h1>
-        <p class="muted">No ads. No fluff. Plan, lift, and progress.</p>
-        <!-- Optional CTA row
-        <p style="margin-top:14px">
-          <a href="#" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:10px 14px;border-radius:12px;color:#fff">
-            Join TestFlight
-          </a>
-        </p>
-        -->
+      <span class="tag">Progress made easy</span>
+      <h1>Simple strength tracking that stays out of your way.</h1>
+      <p class="muted">Standard 5×5 or build your own week. Clean UI, smart rest timer, and quick logging.</p>
+      <div class="cta">
+        <a class="btn primary" href="#" id="testflight">Join TestFlight</a>
+        <a class="btn" href="mailto:support@liftforge.app">Contact</a>
       </div>
-      <div class="hero-visual">
-        <!-- Put hero.png (and optionally hero@2x.png) next to index.html -->
-        <img src="hero.png" srcset="hero.png 1x, hero@2x.png 2x" alt="LiftForge app screenshot">
+
+      <div class="grid">
+        <div class="card"><strong>Standard 5×5</strong><br/><span class="muted">A/B days, auto-progression.</span></div>
+        <div class="card"><strong>Build your own</strong><br/><span class="muted">Map a 7-day week; repeats 12 weeks.</span></div>
+        <div class="card"><strong>Clean & fast</strong><br/><span class="muted">No ads. No fluff. Just training.</span></div>
       </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="card">
-      <h2 style="margin-top:0">Contact</h2>
-      <p class="muted" style="margin-top:-4px">Questions or feedback? Send us a message.</p>
-
-      <form id="contact-form" action="https://formspree.io/f/mbladqen" method="POST">
-        <div class="row">
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" autocomplete="name" placeholder="Your name">
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
-          </div>
-        </div>
-
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="How can we help?" required></textarea>
-        </div>
-
-        <!-- Extras -->
-        <input type="hidden" name="_subject" value="LiftForge contact">
-        <input type="hidden" name="_redirect" value="https://liftforge.app/thanks.html">
-        <input type="text" name="_gotcha" style="display:none">
-
-        <button type="submit">Send message</button>
-      </form>
     </section>
 
     <footer>
-      © <span id="y"></span> LiftForge • <a href="mailto:hello@liftforge.app">hello@liftforge.app</a>
-      <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+      © <span id="y"></span> LiftForge • Made for lifters
     </footer>
   </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+HTML
