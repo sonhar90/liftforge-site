@@ -2,115 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LiftForge — Progress made easy</title>
-  <meta name="description" content="LiftForge is a clean strength tracker. Standard 5×5 or build-your-own week. Progress made easy." />
-  <link rel="canonical" href="https://liftforge.app/" />
-  <meta name="theme-color" content="#0b0b0c" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LiftForge — Private iOS strength log (5×5, custom plans)</title>
+  <meta name="description" content="LiftForge is a private, local-first iOS training log. Heaviest actual set wins, StrongLifts-style progression, custom exercises, no tracking." />
+  <link rel="canonical" href="https://YOUR-DOMAIN/" />
+  <meta name="theme-color" content="#FF925C" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="LiftForge — Progress made easy" />
-  <meta property="og:description" content="A simple, fast strength tracker. Standard 5×5 or build-your-own." />
-  <meta property="og:image" content="https://liftforge.app/og.png" />
-  <meta property="og:url" content="https://liftforge.app/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LiftForge — Private iOS strength log" />
+  <meta property="og:description" content="Heaviest actual weight wins. StrongLifts-style progression. Custom exercises. No tracking." />
+  <meta property="og:url" content="https://YOUR-DOMAIN/" />
+  <meta property="og:image" content="https://YOUR-DOMAIN/og.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LiftForge — Private iOS strength log" />
+  <meta name="twitter:description" content="Heaviest actual weight wins. StrongLifts-style progression. Custom exercises. No tracking." />
+  <meta name="twitter:image" content="https://YOUR-DOMAIN/og.jpg" />
 
-  <!-- Icons -->
+  <!-- Smart App Banner (uncomment & set your App Store ID when live) -->
+  <!-- <meta name="apple-itunes-app" content="app-id=XXXXXXXXX"> -->
+
   <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-  <style>
-    :root { color-scheme: light dark; --bg:#0b0b0c; --fg:#f5f5f7; --muted:#9aa0a6; --accent:#ff7a45; --accentText:#1b1b1c; }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      background:linear-gradient(180deg,#0b0b0c,#141416);
-      color:var(--fg);
-      display:flex; align-items:center; justify-content:center;
-    }
-    .wrap{max-width:920px; padding:32px 20px; width:100%}
-    header{display:flex; justify-content:space-between; align-items:center; margin-bottom:28px}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
-    .brand img{width:28px;height:28px;border-radius:8px; display:block}
-    .muted{color:var(--muted)}
-    nav a{color:#ffd9cc; text-decoration:none; margin-left:10px}
-    nav a:hover{text-decoration:underline}
-
-    .hero{display:grid; gap:18px; padding:28px; border-radius:20px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06)}
-    .tag{display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,122,69,.12); color:#ffd9cc; font-weight:600; font-size:13px}
-    h1{font-size:clamp(28px,4vw,48px); line-height:1.1; margin:0}
-    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:4px}
-    .btn{padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.12); text-decoration:none; color:var(--fg); font-weight:700; min-height:44px; display:inline-flex; align-items:center; justify-content:center}
-    .btn.primary{background:var(--accent); border-color:var(--accent); color:var(--accentText)}
-    .btn:focus, a:focus{outline:2px solid var(--accent); outline-offset:2px}
-
-    .grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:4px}
-    .card{padding:14px;border-radius:14px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); min-height:88px}
-
-    .shots{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:14px}
-    .shots img{width:100%; height:420px; object-fit:cover; border-radius:16px; border:1px solid rgba(255,255,255,.06); background:#0f0f10}
-
-    footer{margin-top:18px; color:var(--muted); font-size:14px; display:flex; gap:12px; flex-wrap:wrap}
-    @media (max-width:780px){
-      .hero{padding:22px}
-      .grid{grid-template-columns:1fr}
-      .shots{grid-template-columns:1fr}
-    }
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none !important; transition:none !important}
-    }
-  </style>
+  <link rel="preload" href="/style.css" as="style">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="wrap">
+    <nav class="nav">
       <div class="brand">
-        <img src="/logo.png" alt="LiftForge logo">
+        <img src="/apple-touch-icon.png" alt="" width="28" height="28" />
         <span>LiftForge</span>
       </div>
-      <nav class="muted">
-        <a href="/privacy.html">Privacy</a> •
-        <a href="/terms.html">Terms</a> •
-        <a href="mailto:support@liftforge.app">Support</a>
-      </nav>
-    </header>
+      <div class="nav-right">
+        <a href="#features" class="link">Features</a>
+        <a href="#faq" class="link">FAQ</a>
+        <a href="/privacy.html" class="link">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <!-- Success banner if you redirect to /#thanks after form/signup -->
+    <div id="thanks" class="banner" hidden>
+      <strong>Thanks!</strong> You’re on the list — we’ll email when there’s news.
+    </div>
 
     <section class="hero">
-      <span class="tag">Progress made easy</span>
-      <h1>Simple strength tracking that stays out of your way.</h1>
-      <p class="muted">Standard 5×5 or build your own week. Clean UI, smart rest timer, and quick logging.</p>
-
-      <div class="cta">
-        <!-- Replace with your public TestFlight URL -->
-        <a class="btn primary" href="https://testflight.apple.com/join/TESTFLIGHT_URL_HERE">Join TestFlight</a>
-        <a class="btn" href="mailto:support@liftforge.app">Contact</a>
+      <h1>Private iOS training log.<br><span class="accent">Heaviest actual weight wins.</span></h1>
+      <p class="lede">
+        Local-first workout logging with StrongLifts-style progression, custom exercises,
+        AMRAP support, and a clean guided session flow. No analytics. No tracking.
+      </p>
+      <div class="cta-row">
+        <!-- Replace with your real link(s) -->
+        <a class="btn" href="https://testflight.apple.com/join/your-code">Get on TestFlight</a>
+        <a class="btn ghost" href="#features">See features</a>
       </div>
 
+      <!-- Optional hero image/screenshot -->
+      <figure class="hero-shot">
+        <img src="/images/screenshot-session.png" alt="LiftForge session view showing sets, reps, and weight control" />
+      </figure>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Why LiftForge?</h2>
       <div class="grid">
-        <div class="card"><strong>Standard 5×5</strong><br><span class="muted">A/B days with auto-progression.</span></div>
-        <div class="card"><strong>Build your own</strong><br><span class="muted">Map a 7-day week; repeats 12 weeks.</span></div>
-        <div class="card"><strong>Clean & fast</strong><br><span class="muted">No ads. No fluff. Just training.</span></div>
-      </div>
-
-      <!-- Optional: add two screenshots (drop images at /shots/1.jpg and /shots/2.jpg) -->
-      <div class="shots">
-        <img src="/shots/1.jpg" alt="LiftForge session screen (screenshot)" loading="lazy">
-        <img src="/shots/2.jpg" alt="Plan / Program builder (screenshot)" loading="lazy">
+        <article class="card">
+          <h3>Heaviest actual wins</h3>
+          <p>If you planned 80 kg but hit 90 kg on any successful set, next time starts from ≥ 90 kg — even for custom exercises.</p>
+        </article>
+        <article class="card">
+          <h3>StrongLifts progression</h3>
+          <p>5×5 progression is built-in, but the “heaviest actual” rule overrides automatic bumps when you outperform the plan.</p>
+        </article>
+        <article class="card">
+          <h3>Custom exercises</h3>
+          <p>Use any name/ID. We normalize IDs on create and persist working weights per exercise ID across sessions.</p>
+        </article>
+        <article class="card">
+          <h3>AMRAP friendly</h3>
+          <p>Target reps of 0 mean AMRAP; any positive weight logs as a success for progression.</p>
+        </article>
+        <article class="card">
+          <h3>Local-first & private</h3>
+          <p>All data stays on your device using iOS storage. No accounts, no trackers, no ads.</p>
+        </article>
+        <article class="card">
+          <h3>12-week sequencing</h3>
+          <p>Simple A/B cadence expanded over 12 weeks, with a nice “Rest/Bonus” flow on off days.</p>
+        </article>
       </div>
     </section>
 
-    <footer>
-      <span>© <span id="y"></span> LiftForge</span>
-      <span>•</span>
-      <span>No ads. No tracking.</span>
-    </footer>
-  </div>
+    <section class="section">
+      <h2>Screenshots</h2>
+      <div class="grid shots">
+        <figure class="shot">
+          <img src="/images/screenshot-heaviest.png" alt="Heaviest set override ensuring next session uses the heavier weight" />
+          <figcaption>Heaviest set overrides strategy.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/images/screenshot-custom.png" alt="Custom exercise creation and normalized IDs" />
+          <figcaption>Custom exercises with normalized IDs.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/images/screenshot-plan.png" alt="12-week plan viewer with A/B and rest days" />
+          <figcaption>12-week plan viewer.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>FAQ</h2>
+      <details>
+        <summary>How are working weights chosen?</summary>
+        <p>We store one working weight per exercise ID. A StrongLifts bump applies on success, but if you lifted heavier than planned and hit target reps (or AMRAP), we clamp the new working weight to your heaviest successful set.</p>
+      </details>
+      <details>
+        <summary>Does it work with custom exercises?</summary>
+        <p>Yes. Custom IDs are normalized when created. Working weights are keyed by the ID, not the display name.</p>
+      </details>
+      <details>
+        <summary>What data do you collect?</summary>
+        <p>None. The app is local-first and stores everything on your device. See the <a href="/privacy.html">Privacy Policy</a>.</p>
+      </details>
+      <details>
+        <summary>Is there an Android version?</summary>
+        <p>Not yet — currently iOS only.</p>
+      </details>
+    </section>
+
+    <section class="section cta-bottom">
+      <h2>Ready to lift?</h2>
+      <p class="lede">Join TestFlight and be the first to try LiftForge.</p>
+      <a class="btn" href="https://testflight.apple.com/join/your-code">Get on TestFlight</a>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> LiftForge</p>
+    <nav class="foot-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="mailto:hello@YOUR-DOMAIN">Contact</a>
+      <a href="https://github.com/sonhar90/liftforge-site" rel="noopener">GitHub</a>
+    </nav>
+  </footer>
 
   <script>
+    // Show thank-you banner if arriving with #thanks
+    if (location.hash === '#thanks') {
+      const b = document.getElementById('thanks');
+      if (b) b.hidden = false;
+    }
     // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- JSON-LD App metadata -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"LiftForge",
+    "applicationCategory":"Health & Fitness",
+    "operatingSystem":"iOS",
+    "description":"Private, local-first strength log with StrongLifts-style progression and custom exercises. Heaviest actual set wins.",
+    "url":"https://YOUR-DOMAIN/",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+  }
   </script>
 </body>
 </html>
