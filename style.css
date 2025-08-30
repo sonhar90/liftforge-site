@@ -1,8 +1,24 @@
 /* Minimal, fast, accessible */
-:root{--accent:#FF925C;--fg:#111;--muted:#555;--bg:#fff;--card:#f7f7f8;--stroke:#eaeaec}
+:root{
+  --accent:#FF925C;
+  --fg:#111;
+  --muted:#555;
+  --bg:#fff;
+  --card:#f7f7f8;
+  --stroke:#eaeaec;
+
+  /* One width token so the hero image matches screenshot cards */
+  --shot-w: clamp(260px, 52vw, 420px);
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;color:var(--fg);background:var(--bg);font:16px/1.55 -apple-system,system-ui,"Segoe UI",Roboto,Inter,Arial,sans-serif}
+body{
+  margin:0;
+  color:var(--fg);
+  background:var(--bg);
+  font:16px/1.55 -apple-system,system-ui,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+}
 img{max-width:100%;height:auto;display:block}
 
 /* Layout */
@@ -23,27 +39,37 @@ img{max-width:100%;height:auto;display:block}
 .hero{padding:28px 0 8px}
 .tagline{margin:0 0 6px;font-weight:700;letter-spacing:.2px}
 h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 12px}
-.accent{background:linear-gradient(135deg,var(--accent),#C76D43);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lede{font-size:1.1rem;color:var(--muted);max-width:44ch}
-.cta-row{display:flex;gap:12px;align-items:center;margin:18px 0 6px;flex-wrap:wrap}
+.accent{
+  background:linear-gradient(135deg,var(--accent),#C76D43);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.lede{font-size:1.1rem;color:var(--muted);max-width:44ch;margin-inline:auto}
+.cta-row{display:flex;gap:12px;align-items:center;margin:18px 0 6px;flex-wrap:wrap;justify-content:center}
 
-/* HERO IMAGE SIZE: match screenshot cards */
-.hero-shot{margin:16px 0 0;display:grid;place-items:center}
+/* HERO IMAGE SIZE: same footprint as gallery screenshots */
+.hero-shot{margin:16px 0 0;display:flex;justify-content:center}
 .hero-shot img{
-  border-radius:16px;border:1px solid var(--stroke);box-shadow:0 12px 32px rgba(0,0,0,.06);
-  /* Keep the hero phone the same footprint as gallery screenshots */
-  width:clamp(240px,32vw,360px);
+  width:var(--shot-w);
+  border-radius:16px;
+  border:1px solid var(--stroke);
+  box-shadow:0 12px 32px rgba(0,0,0,.06);
 }
 
 /* Sections */
 .section{padding:28px 0}
-.section h2{font-size:1.5rem;margin:0 0 12px}
+.section h2{font-size:1.5rem;margin:0 0 12px;text-align:left}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .card{background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:14px}
 .card h3{margin:0 0 6px;font-size:1.05rem}
 .card p{margin:0;color:#333}
 
-.shots .shot img{border-radius:12px;border:1px solid var(--stroke)}
+/* Screenshots */
+.shots .shot{display:flex;flex-direction:column;align-items:center}
+.shots .shot img{
+  width:var(--shot-w);
+  border-radius:12px;
+  border:1px solid var(--stroke);
+}
 .shot figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
 
 /* Footer */
@@ -53,13 +79,23 @@ h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:0 0 12px}
 .foot-links a:hover{opacity:1}
 
 /* Buttons & UI */
-.btn{display:inline-block;padding:12px 16px;border-radius:12px;background:color-mix(in oklab, var(--accent) 84%, white);border:1px solid color-mix(in oklab,var(--accent) 72%, white);color:#000;text-decoration:none;font-weight:700}
+.btn{
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:12px;
+  background:color-mix(in oklab, var(--accent) 84%, white);
+  border:1px solid color-mix(in oklab, var(--accent) 72%, white);
+  color:#000;
+  text-decoration:none;
+  font-weight:700;
+  transition:transform .08s ease;
+}
 .btn:hover{transform:translateY(-1px)}
 .btn.ghost{background:#fff;border:1px solid var(--stroke)}
 .banner{background:#EAFBF0;border:1px solid #CAEFD7;color:#0B6B3A;padding:10px 12px;border-radius:10px;margin:6px 0}
 
 /* Prose pages */
-.prose{max-width:760px}
+.prose{max-width:760px;margin-inline:auto}
 .prose h1{margin-top:8px}
 .prose h2{margin-top:16px}
-.prose p, .prose li{color:#333}
+.prose p,.prose li{color:#333}
