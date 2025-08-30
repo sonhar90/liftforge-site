@@ -2,181 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>LiftForge — Progress made easy</title>
-  <meta name="description" content="Private iOS strength log focused on making progression easy and automatic. Heaviest actual set wins, Standard 5×5 progression, custom exercises, AMRAP, and a guided session flow." />
-  <link rel="canonical" href="https://liftforge.app/">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Private iOS training log. Heaviest actual weight wins. Standard 5×5 progression, custom exercises, AMRAP, and a clean guided session flow." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="LiftForge — Progress made easy">
-  <meta property="og:description" content="A private iOS strength log with Standard 5×5 progression and heaviest-actual updates.">
-  <meta property="og:image" content="/og.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://liftforge.app/">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="LiftForge — Progress made easy" />
+  <meta property="og:description" content="Private iOS training log where your heaviest successful set becomes the new baseline." />
+  <meta property="og:image" content="/og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://liftforge.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LiftForge — Progress made easy" />
+  <meta name="twitter:description" content="Private iOS training log where your heaviest successful set becomes the new baseline." />
+  <meta name="twitter:image" content="/og.jpg" />
 
   <!-- Icons -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="wrap">
     <!-- Nav -->
-    <header class="nav" aria-label="Primary">
-      <a class="brand link" href="/">
-        <img src="/apple-touch-icon.png" alt="" width="28" height="28" style="border-radius:6px;border:1px solid var(--stroke)">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand link" href="/" aria-label="LiftForge home">
+        <img src="/apple-touch-icon.png" alt="" width="28" height="28" style="border-radius:6px" />
         <span>LiftForge</span>
       </a>
-      <nav class="nav-right">
+      <div class="nav-right">
         <a class="link" href="#features">Features</a>
-        <a class="link" href="#how">How it works</a>
-        <a class="link" href="#shots">Screenshots</a>
+        <a class="link" href="#faq">FAQ</a>
         <a class="link" href="/privacy.html">Privacy</a>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
     <!-- Hero -->
-    <main id="main">
-      <section class="hero center" aria-label="Intro">
-        <div>
-          <h1><span class="accent">Progress made easy.</span></h1>
-          <p class="lede">
-            LiftForge is a private iOS strength log that makes progression
-            <em>automatic and obvious</em>. One working weight per exercise,
-            updated by plan or by your performance — whichever is higher.
-          </p>
+    <main id="main" class="hero">
+      <p class="tagline accent">Progress made easy</p>
+      <h1>Private iOS training log.<br /><span class="accent">Heaviest actual weight wins.</span></h1>
+      <p class="lede">
+        Local-first workout logging with <strong>Standard&nbsp;5×5</strong> progression,
+        custom exercises, AMRAP support, and a clean guided session flow.
+        No analytics. No tracking.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="https://testflight.apple.com" rel="noopener">Get on TestFlight</a>
+        <a class="btn ghost" href="#features">See features</a>
+      </div>
 
-          <div class="cta-row">
-            <a class="btn" href="https://testflight.apple.com" rel="noopener">Get on TestFlight</a>
-            <span class="banner">No account · No tracking · On-device</span>
-          </div>
-
-          <figure class="hero-shot" aria-label="App session view">
-            <img src="/images/screenshot-session.png"
-                 alt="Guided session with weight, reps, rest timer and notes">
-          </figure>
-        </div>
-      </section>
-
-      <!-- Why / Features -->
-      <section id="features" class="section" aria-labelledby="why">
-        <h2 id="why">Why LiftForge?</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Heaviest actual wins</h3>
-            <p>
-              If you planned 80&nbsp;kg but hit 90&nbsp;kg on any successful set,
-              your next session starts from ≥&nbsp;90&nbsp;kg. Works for any exercise ID —
-              including your custom ones.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Standard 5×5 progression</h3>
-            <p>
-              Built-in 5×5-style increases when targets are met. If you lift heavier
-              than planned, the heaviest-actual update overrides the automatic bump.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Custom exercises</h3>
-            <p>
-              Create any exercise name. IDs are normalized once, and working weights
-              are stored per ID across sessions.
-            </p>
-          </article>
-          <article class="card">
-            <h3>AMRAP-friendly</h3>
-            <p>
-              Target reps of 0 mean AMRAP; any positive weight counts as a success
-              for progression.
-            </p>
-          </article>
-          <article class="card">
-            <h3>12-week sequencing</h3>
-            <p>
-              A clear A/B cadence expanded across 12 weeks, with an optional
-              Rest/Bonus flow.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Local-first & private</h3>
-            <p>
-              Everything is stored on your device using iOS storage.
-              No analytics. No tracking. No ads.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- How it works -->
-      <section id="how" class="section" aria-labelledby="how-title">
-        <h2 id="how-title">How it works</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>1) Pick a plan</h3>
-            <p>
-              Start with <em>Standard 5×5</em> or build your own 7-day week that repeats
-              over 12 weeks.
-            </p>
-          </article>
-          <article class="card">
-            <h3>2) Run a guided session</h3>
-            <p>
-              Adjust weight, log reps, use the built-in rest timer, and add notes.
-              AMRAP sets use reps&nbsp;=&nbsp;0.
-            </p>
-          </article>
-          <article class="card">
-            <h3>3) Save — we update</h3>
-            <p>
-              After saving, each exercise’s working weight becomes the higher of
-              (a) the plan’s 5×5 bump or (b) your <em>heaviest successful set</em>.
-              Zero-weight sets are ignored.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Screenshots -->
-      <section id="shots" class="section shots" aria-labelledby="screenshots-title">
-        <h2 id="screenshots-title">Screenshots</h2>
-        <div class="center" style="margin-top:8px;">
-          <figure class="shot">
-            <img src="/images/screenshot-heaviest.png" alt="Heaviest set overrides the planned progression">
-            <figcaption>Heaviest-actual overrides automatic bumps.</figcaption>
-          </figure>
-          <figure class="shot" style="margin-top:18px;">
-            <img src="/images/screenshot-custom.png" alt="Custom exercise with normalized IDs">
-            <figcaption>Custom exercises with normalized IDs.</figcaption>
-          </figure>
-          <figure class="shot" style="margin-top:18px;">
-            <img src="/images/screenshot-plan.png" alt="12-week plan viewer with A/B cadence">
-            <figcaption>12-week plan viewer with A/B cadence.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="section center" aria-label="Call to action">
-        <div>
-          <h2>Ready to lift?</h2>
-          <p class="lede">Join TestFlight and be the first to try LiftForge.</p>
-          <div class="cta-row" style="justify-content:center;">
-            <a class="btn" href="https://testflight.apple.com" rel="noopener">Get on TestFlight</a>
-            <a class="btn ghost" href="#features">See features</a>
-          </div>
-        </div>
-      </section>
+      <div class="hero-shot" aria-label="App session view">
+        <img src="/images/screenshot-session.png" alt="LiftForge session view showing sets, reps, and weight control" />
+      </div>
     </main>
 
+    <!-- Why / Features -->
+    <section id="features" class="section">
+      <h2>Why LiftForge?</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Heaviest actual wins</h3>
+          <p>If you planned 80&nbsp;kg but hit 90&nbsp;kg on any <em>successful</em> set,
+             next time starts from ≥&nbsp;90&nbsp;kg — even for custom exercises.</p>
+        </article>
+        <article class="card">
+          <h3>Standard 5×5 progression</h3>
+          <p>Automatic 5×5 bumps after a successful session.
+             If you outperform the plan, your heaviest successful set overrides the bump.</p>
+        </article>
+        <article class="card">
+          <h3>Custom exercises</h3>
+          <p>Use any name. We normalize IDs at creation and persist working weights
+             per exercise ID across sessions.</p>
+        </article>
+        <article class="card">
+          <h3>AMRAP friendly</h3>
+          <p>Target reps of 0 mean AMRAP; any positive weight logs as a success for progression.</p>
+        </article>
+        <article class="card">
+          <h3>Local-first &amp; private</h3>
+          <p>All data stays on your device using iOS storage. No accounts, no trackers, no ads.</p>
+        </article>
+        <article class="card">
+          <h3>12-week sequencing</h3>
+          <p>Simple A/B cadence expanded over 12 weeks, with a smooth “Rest/Bonus” flow on off days.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+      <h2>How it works</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>1. Start a session</h3>
+          <p>Open the plan and lift. We show your current working weight per exercise.</p>
+        </article>
+        <article class="card">
+          <h3>2. Log sets, your way</h3>
+          <p>Record reps and weight. AMRAP? Set target reps to 0 and just lift.</p>
+        </article>
+        <article class="card">
+          <h3>3. We update your base</h3>
+          <p>If you meet target reps on any set (or AMRAP with weight &gt; 0), we clamp the next
+             working weight to your heaviest successful set.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section shots">
+      <h2>Screenshots</h2>
+      <div class="grid">
+        <figure class="shot">
+          <img src="/images/screenshot-heaviest.png" alt="Heaviest set override ensuring next session uses the heavier weight">
+          <figcaption>Heaviest set overrides strategy.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/images/screenshot-custom.png" alt="Custom exercise creation and normalized IDs">
+          <figcaption>Custom exercises with normalized IDs.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="/images/screenshot-plan.png" alt="12-week plan viewer with A/B and rest days">
+          <figcaption>12-week plan viewer.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section prose">
+      <h2>FAQ</h2>
+
+      <h3>How are working weights chosen?</h3>
+      <p>We store one working weight per exercise ID. A Standard 5×5 bump applies on success, but if
+         you lifted heavier than planned and hit target reps (or AMRAP with weight &gt; 0), we clamp
+         the new working weight to your heaviest successful set.</p>
+
+      <h3>Does it work with custom exercises?</h3>
+      <p>Yes. Custom IDs are normalized when created. Working weights are keyed by the ID, not the display name.</p>
+
+      <h3>What data do you collect?</h3>
+      <p>None. The app is local-first and stores everything on your device. See the
+         <a href="/privacy.html">Privacy Policy</a>.</p>
+
+      <h3>Is there an Android version?</h3>
+      <p>Not yet — currently iOS only.</p>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-      <small>© LiftForge</small>
+    <footer class="footer">
+      <div>© LiftForge</div>
       <div class="foot-links">
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>
