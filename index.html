@@ -1,148 +1,172 @@
 <!doctype html>
-<html lang="en">
+<html lang="nb">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LiftForge — Progress made easy</title>
-  <meta name="description" content="LiftForge is a private iOS workout log that makes progression easy. Heaviest actual set wins, Standard 5×5 progression, AMRAP support, custom exercises, and a clean guided session flow." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LiftForge — enkel treningsapp uten innlogging</title>
+  <link rel="canonical" href="https://liftforge.app/">
 
-  <!-- Social -->
-  <meta property="og:title" content="LiftForge — Progress made easy" />
-  <meta property="og:description" content="Heaviest actual set wins. Standard 5×5 progression with local-first privacy." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og.jpg" />
-  <meta property="og:url" content="https://liftforge.app/" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Primary meta -->
+  <meta name="title" content="LiftForge — enkel treningsapp uten innlogging">
+  <meta name="description" content="Tilbake til basics: kjapp logging, enkel progresjon, ingen konto, ingen støy. Fortsett økter på tvers av appstarter. Bonusøkter når du vil.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://liftforge.app/">
+  <meta property="og:title" content="LiftForge — enkel treningsapp uten innlogging">
+  <meta property="og:description" content="Kjapp logging, enkel progresjon. Bonusøkter. Fortsett der du slapp.">
+  <meta property="og:image" content="https://liftforge.app/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://liftforge.app/">
+  <meta name="twitter:title" content="LiftForge — enkel treningsapp uten innlogging">
+  <meta name="twitter:description" content="Kjapp logging, enkel progresjon. Bonusøkter. Fortsett der du slapp.">
+  <meta name="twitter:image" content="https://liftforge.app/assets/og-image.jpg">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#111111">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* System font fallback tidlig (unngår FOUC hvis CSS loader tregt) */
+    :root { --accent:#ffb347; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, system-ui, sans-serif; }
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
 
-  <header class="wrap nav" aria-label="Top">
-    <a class="brand link" href="/" aria-label="LiftForge">
-      <img alt="" src="/apple-touch-icon.png" width="28" height="28" style="border-radius:6px" />
-      <span>LiftForge</span>
-    </a>
-    <nav class="nav-right" aria-label="Primary">
-      <a class="link" href="#features">Features</a>
-      <a class="link" href="#faq">FAQ</a>
-      <a class="link" href="/privacy.html">Privacy</a>
-    </nav>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container row">
+      <a class="brand" href="#top" aria-label="LiftForge hjem">
+        <img src="assets/logo.svg" alt="LiftForge logo" width="160" height="40">
+      </a>
+      <nav class="nav">
+        <a href="#features">Funksjoner</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main" class="wrap">
-    <!-- Hero -->
-    <section class="hero center" aria-labelledby="hero-title">
-      <div>
-        <h1 id="hero-title"><span class="accent">Progress made easy.</span></h1>
-        <p class="lede">
-          Private iOS training log where the <strong>heaviest actual set wins</strong>.
-          Standard 5×5 progression, AMRAP support, custom exercises, and a clean guided session flow.
-          Local-first. No accounts. No tracking.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="https://testflight.apple.com" rel="noopener">Get on TestFlight</a>
-          <a class="btn ghost" href="#features">See features</a>
-        </div>
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <h1>Treningsapp uten innlogging — <span>tilbake til basics</span></h1>
+        <p>Kjapp logging. Enkel progresjon. Fortsett økter der du slapp — selv om appen ble lukket. Bonusøkter når du har overskudd.</p>
 
-        <!-- Hero image (same width as screenshots) -->
-        <div class="hero-shot" aria-hidden="true">
-          <img src="/images/screenshot-session.png"
-               alt="LiftForge session view showing sets, reps, and weight control" />
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Be om beta-tilgang</a>
+
+          <!-- Skjul TestFlight-lenken bak detaljer (kan fjernes om du vil vise den åpent) -->
+          <details class="beta-details">
+            <summary class="btn btn-ghost">Har du invitasjon?</summary>
+            <div class="beta-panel">
+              <p>Hvis du allerede har fått invitasjon, kan du laste ned via TestFlight:</p>
+              <p><a class="btn btn-secondary" href="https://testflight.apple.com/join/3GmutBGT" rel="noopener">Åpne i TestFlight</a></p>
+            </div>
+          </details>
         </div>
+      </div>
+
+      <div class="hero-shot">
+        <!-- Bruk et pent «home»-screenshot her -->
+        <img src="assets/shots/home.png" alt="LiftForge – Home med dagens plan" loading="eager">
       </div>
     </section>
 
     <!-- Features -->
-    <section id="features" class="section" aria-labelledby="why">
-      <h2 id="why">Why LiftForge?</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Heaviest actual wins</h3>
-          <p>If you planned 80&nbsp;kg but hit 90&nbsp;kg on any successful set, your next session starts from ≥&nbsp;90&nbsp;kg — even for custom exercises.</p>
-        </article>
-        <article class="card">
-          <h3>Standard 5×5 progression</h3>
-          <p>Automatic 5×5 bumps on success. When you outperform the plan, the heaviest successful set overrides the bump.</p>
-        </article>
-        <article class="card">
-          <h3>Custom exercises</h3>
-          <p>Use any exercise name. IDs are normalized on create, and working weights are stored per exercise ID.</p>
-        </article>
-        <article class="card">
-          <h3>AMRAP friendly</h3>
-          <p>Target reps of 0 means AMRAP. Any positive weight counts as a success for progression.</p>
-        </article>
-        <article class="card">
-          <h3>Local-first & private</h3>
-          <p>Everything stays on your device using iOS storage. No analytics. No tracking. No ads.</p>
-        </article>
-        <article class="card">
-          <h3>12-week sequencing</h3>
-          <p>Simple A/B cadence expanded across 12 weeks, with a smooth “Rest/Bonus” flow on off days.</p>
-        </article>
-      </div>
+    <section id="features" class="container">
+      <h2>Hvorfor LiftForge?</h2>
+      <ul class="feature-list">
+        <li><strong>Ingen innlogging.</strong> Åpne, løft, logg, ferdig.</li>
+        <li><strong>Fortsett økter.</strong> «Continue Workout» på tvers av appstarter og dagsskifter.</li>
+        <li><strong>Hvile-timer som funker.</strong> Teller ned i bakgrunnen, med varsling når du er klar.</li>
+        <li><strong>Bonusøkter.</strong> Legg til enkle tilleggsøvelser når du vil.</li>
+        <li><strong>Progresjon uten støy.</strong> Enkelt opplegg, tydelig fremgang, historie for tilbakeblikk.</li>
+        <li><strong>Offline vennlig.</strong> Kjernefunksjonene funker uten nett.</li>
+      </ul>
     </section>
 
     <!-- Screenshots -->
-    <section class="section shots" aria-labelledby="shots">
-      <h2 id="shots">Screenshots</h2>
-      <div class="grid" style="align-items:start">
-        <figure class="shot">
-          <img src="/images/screenshot-heaviest.png" alt="Heaviest set override ensuring next session uses the heavier weight" />
-          <figcaption>Heaviest set overrides strategy.</figcaption>
+    <section id="screenshots" class="container">
+      <h2>Screenshots</h2>
+      <div class="shots-grid">
+        <figure>
+          <img src="assets/shots/home.png" alt="Home med dagens plan">
+          <figcaption>Home — dagens plan</figcaption>
         </figure>
-        <figure class="shot">
-          <img src="/images/screenshot-custom.png" alt="Custom exercise creation and normalized IDs" />
-          <figcaption>Custom exercises with normalized IDs.</figcaption>
+        <figure>
+          <img src="assets/shots/session.png" alt="Session med set/rep og hvile">
+          <figcaption>Session — set/rep & hvile</figcaption>
         </figure>
-        <figure class="shot">
-          <img src="/images/screenshot-plan.png" alt="12-week plan viewer with A/B and rest days" />
-          <figcaption>12-week plan viewer.</figcaption>
+        <figure>
+          <img src="assets/shots/bonus.png" alt="Bonus workout">
+          <figcaption>Bonus workout</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/shots/history.png" alt="Historikk og progresjon">
+          <figcaption>Historikk & progresjon</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="section prose" aria-labelledby="faq-title">
-      <h2 id="faq-title">FAQ</h2>
-
-      <h3>How are working weights chosen?</h3>
-      <p>We store one working weight per exercise ID. A Standard 5×5 bump applies on success, but if you lifted heavier than planned and met target reps (or AMRAP), we clamp the new working weight to your <em>heaviest successful set</em>.</p>
-
-      <h3>Does it work with custom exercises?</h3>
-      <p>Yes. Custom IDs are normalized when created. Working weights are keyed by the ID, not the display name.</p>
-
-      <h3>What data do you collect?</h3>
-      <p>None. LiftForge is local-first and stores everything on your device. See the <a href="/privacy.html">Privacy Policy</a>.</p>
-
-      <h3>Is there an Android version?</h3>
-      <p>Not yet — currently iOS only.</p>
+    <!-- Lite “om personvern” / FAQ (valgfritt å utvide senere) -->
+    <section class="container">
+      <h2>Filosofi</h2>
+      <p>LiftForge er laget for deg som vil trene uten friksjon. Ingen konto. Ingen feed. Bare økter, progresjon og arbeidsro.</p>
     </section>
 
-    <section class="section center" aria-labelledby="cta">
-      <div>
-        <h2 id="cta">Ready to lift?</h2>
-        <div class="cta-row">
-          <a class="btn" href="https://testflight.apple.com" rel="noopener">Get on TestFlight</a>
-        </div>
-      </div>
+    <!-- Kontakt -->
+    <section id="contact" class="container">
+      <h2>Kontakt</h2>
+      <p>Vil du teste betaen, eller har du spørsmål? Send en melding så får du invitasjon fortløpende.</p>
+
+      <form action="https://formspree.io/f/mbladqen" method="POST" class="contact-form" accept-charset="UTF-8">
+        <label>
+          Din e-post
+          <input type="email" name="email" required placeholder="deg@epost.no">
+        </label>
+
+        <label>
+          Melding
+          <textarea name="message" rows="5" required placeholder="Jeg vil gjerne være med i betaen 👋"></textarea>
+        </label>
+
+        <!-- anti-spam honeypot -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <!-- valgfritt emne på e-posten du får fra Formspree -->
+        <input type="hidden" name="_subject" value="LiftForge – henvendelse fra nettsiden">
+
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
     </section>
   </main>
 
-  <footer class="wrap footer" aria-label="Footer">
-    <span>© LiftForge</span>
-    <nav class="foot-links" aria-label="Footer links">
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="https://github.com/sonhar90/liftforge-site">GitHub</a>
-    </nav>
+  <footer class="site-footer">
+    <div class="container row">
+      <div class="footer-left">
+        <img src="assets/logo.svg" alt="LiftForge logo" width="120" height="30">
+        <span>© <span id="year"></span> LiftForge</span>
+      </div>
+      <div class="footer-right">
+        <a href="#features">Funksjoner</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Oppdatér år i footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
