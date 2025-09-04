@@ -218,3 +218,34 @@ h2 { font-size: 28px; margin: 0 0 16px 0; }
   .hero-shot { order: -1; }
   .nav { display: none; }
 }
+/* Screenshots: 1 kol mob, 2 kol desktop */
+.screens {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Viktig: sørg for at INGEN barn spenner flere kolonner */
+.screens > * { grid-column: auto !important; }
+
+/* Desktop: akkurat to kolonner */
+@media (min-width: 900px) {
+  .screens {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Kortstil + mindre progress-bilde */
+.shot {
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: 0 12px 36px var(--shadow);
+  overflow: hidden;
+}
+.shot img { width: 100%; display: block; }
+
+.shot-sm { max-width: 320px; justify-self: center; }
+@media (max-width: 520px) { .shot-sm { max-width: 260px; } }
+
