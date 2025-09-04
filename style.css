@@ -136,35 +136,6 @@ h2 { font-size: 28px; margin: 0 0 16px 0; }
 }
 .feature-list strong { color: var(--text); }
 
-/* Screenshots: 1 col mobile, 2 cols desktop */
-.screens {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-/* Desktop: force two columns */
-@media (min-width: 900px) {
-  .screens {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-
-/* Card frame */
-.shot {
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: var(--card);
-  box-shadow: 0 12px 36px var(--shadow);
-  overflow: hidden;
-}
-
-.shot img { width: 100%; display: block; }
-
-/* Make the progress shot a bit smaller and centered */
-.shot-sm { max-width: 320px; justify-self: center; }
-@media (max-width: 520px) { .shot-sm { max-width: 260px; } }
 
 
 /* Kontakt */
