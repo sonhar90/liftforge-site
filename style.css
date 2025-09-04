@@ -136,13 +136,22 @@ h2 { font-size: 28px; margin: 0 0 16px 0; }
 }
 .feature-list strong { color: var(--text); }
 
-/* ====== Screenshots (tilpasset din HTML .screens/.shot) ====== */
+/* ====== Screenshots grid: 1 kolonne på mobil, 2 på desktop ====== */
 .screens {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr;     /* mobil: én kolonne */
   gap: 16px;
+  align-items: start;
 }
 
+/* fra ~720px og opp: to kolonner fast */
+@media (min-width: 720px) {
+  .screens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* kortene */
 .shot {
   border-radius: 16px;
   border: 1px solid var(--line);
@@ -156,15 +165,16 @@ h2 { font-size: 28px; margin: 0 0 16px 0; }
   display: block;
 }
 
-/* Kun progress-bildet litt smalere */
+/* progress-bildet litt smalere, men fortsatt i samme grid-celle */
 .shot-sm {
-  max-width: 320px;     /* juster til 280–360px om du vil */
-  justify-self: center; /* sentrer i grid */
+  max-width: 320px;        /* juster til 280–360px ved behov */
+  justify-self: center;    /* sentrer bildet i cella */
 }
 
 @media (max-width: 520px) {
   .shot-sm { max-width: 260px; }
 }
+
 
 
 /* Kontakt */
