@@ -136,22 +136,22 @@ h2 { font-size: 28px; margin: 0 0 16px 0; }
 }
 .feature-list strong { color: var(--text); }
 
-/* ====== Screenshots grid: 1 kolonne på mobil, 2 på desktop ====== */
+/* Screenshots: 1 col mobile, 2 cols desktop */
 .screens {
   display: grid;
-  grid-template-columns: 1fr;     /* mobil: én kolonne */
+  grid-template-columns: 1fr;
   gap: 16px;
   align-items: start;
 }
 
-/* fra ~720px og opp: to kolonner fast */
-@media (min-width: 720px) {
+/* Desktop: force two columns */
+@media (min-width: 900px) {
   .screens {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 
-/* kortene */
+/* Card frame */
 .shot {
   border-radius: 16px;
   border: 1px solid var(--line);
@@ -160,21 +160,11 @@ h2 { font-size: 28px; margin: 0 0 16px 0; }
   overflow: hidden;
 }
 
-.shot img {
-  width: 100%;
-  display: block;
-}
+.shot img { width: 100%; display: block; }
 
-/* progress-bildet litt smalere, men fortsatt i samme grid-celle */
-.shot-sm {
-  max-width: 320px;        /* juster til 280–360px ved behov */
-  justify-self: center;    /* sentrer bildet i cella */
-}
-
-@media (max-width: 520px) {
-  .shot-sm { max-width: 260px; }
-}
-
+/* Make the progress shot a bit smaller and centered */
+.shot-sm { max-width: 320px; justify-self: center; }
+@media (max-width: 520px) { .shot-sm { max-width: 260px; } }
 
 
 /* Kontakt */
