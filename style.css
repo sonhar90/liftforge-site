@@ -136,23 +136,36 @@ h2 { font-size: 28px; margin: 0 0 16px 0; }
 }
 .feature-list strong { color: var(--text); }
 
-/* Screenshots */
-.shots-grid {
+/* ====== Screenshots (tilpasset din HTML .screens/.shot) ====== */
+.screens {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
-.shots-grid figure { margin: 0; }
-.shots-grid img {
-  width: 100%;
+
+.shot {
   border-radius: 16px;
-  box-shadow: 0 12px 36px var(--shadow);
   border: 1px solid var(--line);
   background: var(--card);
+  box-shadow: 0 12px 36px var(--shadow);
+  overflow: hidden;
 }
-.shots-grid figcaption {
-  font-size: 13px; color: var(--muted); margin-top: 6px;
+
+.shot img {
+  width: 100%;
+  display: block;
 }
+
+/* Kun progress-bildet litt smalere */
+.shot-sm {
+  max-width: 320px;     /* juster til 280–360px om du vil */
+  justify-self: center; /* sentrer i grid */
+}
+
+@media (max-width: 520px) {
+  .shot-sm { max-width: 260px; }
+}
+
 
 /* Kontakt */
 .contact-form {
