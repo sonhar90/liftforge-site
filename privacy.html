@@ -3,32 +3,82 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Privacy Policy — LiftForge</title>
-  <meta name="description" content="LiftForge Privacy Policy" />
-  <link rel="canonical" href="https://YOUR-DOMAIN/privacy.html" />
-  <link rel="stylesheet" href="/style.css" />
+  <meta name="description" content="LiftForge stores your workout data locally on your device. No accounts, no analytics, no trackers." />
+  <link rel="canonical" href="https://liftforge.app/privacy.html" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://liftforge.app/privacy.html" />
+  <meta property="og:title" content="Privacy Policy — LiftForge" />
+  <meta property="og:description" content="LiftForge stores your workout data locally on your device. No accounts, no analytics, no trackers." />
+  <meta property="og:image" content="https://liftforge.app/assets/og-image.png?v=2" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy — LiftForge" />
+  <meta name="twitter:description" content="Local-first iOS training log. Your data stays on your device." />
+  <meta name="twitter:image" content="https://liftforge.app/assets/og-image.png?v=2" />
+
+  <style>
+    :root{
+      --bg:#fafafa; --panel:#ffffff; --text:#121212; --muted:#6b7280;
+      --line:#ececec; --accent:#ff7a3d; --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 20px}
+    header{display:flex;align-items:center;gap:10px}
+    header a.brand{font-weight:700}
+    main{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;margin-top:12px}
+    h1{margin:0 0 6px;font-size:28px}
+    h2{margin:18px 0 8px;font-size:20px}
+    p,li{color:var(--text)}
+    .muted{color:var(--muted)}
+    footer{color:var(--muted);text-align:center;margin:22px 0 12px}
+  </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="wrap"><nav class="nav"><a class="brand link" href="/">← LiftForge</a></nav></header>
-  <main id="main" class="wrap prose">
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective:</strong> <time>2025-08-30</time></p>
-    <p>LiftForge is a private, local-first iOS training log.</p>
-    <h2>Data we store</h2>
-    <ul>
-      <li><strong>On your device only:</strong> workout plans, sets, reps, weights, notes, and preferences.</li>
-      <li><strong>No analytics or tracking:</strong> we do not collect usage data, crash reports, or personal information.</li>
-      <li><strong>Optional contact:</strong> if you email us, we’ll see your address and message. We use it only to reply.</li>
-    </ul>
-    <h2>Third-parties</h2>
-    <p>No third-party SDKs or trackers are used in the app.</p>
-    <h2>Your rights</h2>
-    <p>Your workout data is on your device. Delete the app to remove it. For email requests, contact <a href="mailto:privacy@YOUR-DOMAIN">privacy@YOUR-DOMAIN</a>.</p>
-    <h2>Updates</h2>
-    <p>We may update this policy as features evolve. Changes will be posted here.</p>
-  </main>
-  <footer class="wrap footer"><p>© <span id="year"></span> LiftForge</p></footer>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">← LiftForge</a>
+    </header>
+
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="muted"><strong>Effective:</strong> <time>2025-08-30</time></p>
+
+      <p>LiftForge is a private, local-first iOS training log.</p>
+
+      <h2>Data we store</h2>
+      <ul>
+        <li><strong>On your device only:</strong> workout plans, sets, reps, weights, notes, and preferences.</li>
+        <li><strong>No analytics or tracking:</strong> we do not collect usage data, crash reports, or personal information.</li>
+        <li><strong>Optional contact:</strong> if you email us, we’ll see your address and message. We use it only to reply.</li>
+      </ul>
+
+      <h2>Third-parties</h2>
+      <p>No third-party SDKs or trackers are used in the app.</p>
+
+      <h2>Your rights</h2>
+      <p>Your workout data is on your device. Delete the app to remove it. For email requests, contact
+        <a href="mailto:privacy@liftforge.app">privacy@liftforge.app</a>.
+      </p>
+
+      <h2>Updates</h2>
+      <p>We may update this policy as features evolve. Changes will be posted here.</p>
+    </main>
+
+    <footer>© <span id="year"></span> LiftForge</footer>
+  </div>
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
