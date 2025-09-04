@@ -1,24 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Primary SEO -->
-<meta name="description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://liftforge.app/" />
-<meta property="og:title" content="LiftForge — Progress, made easy." />
-<meta property="og:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
-<meta property="og:image" content="https://liftforge.app/assets/og-image.png?v=2" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <title>LiftForge — Progress, made easy.</title>
+  <meta name="description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
+  <link rel="canonical" href="https://liftforge.app/" />
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="LiftForge — Progress, made easy." />
-<meta name="twitter:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
-<meta name="twitter:image" content="https://liftforge.app/assets/og-image.png?v=2" />
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://liftforge.app/" />
+  <meta property="og:title" content="LiftForge — Progress, made easy." />
+  <meta property="og:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
+  <meta property="og:image" content="https://liftforge.app/assets/og-image.png?v=2" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LiftForge — Progress, made easy." />
+  <meta name="twitter:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
+  <meta name="twitter:image" content="https://liftforge.app/assets/og-image.png?v=2" />
 
   <style>
     :root{
@@ -27,7 +34,7 @@
       --text:#121212;
       --muted:#6b7280;
       --line:#ececec;
-      --accent:#ff7a3d; /* iOS-ish orange */
+      --accent:#ff7a3d;
       --accent-weak: rgba(255,122,61,.12);
       --radius:16px;
     }
@@ -41,8 +48,12 @@
       -webkit-font-smoothing:antialiased;
       line-height:1.45;
     }
+    img{max-width:100%;height:auto;display:block}
     a{color:var(--accent);text-decoration:none}
+
     .wrap{max-width:980px;margin:0 auto;padding:28px 20px}
+
+    /* Header */
     header{
       display:flex;align-items:center;gap:12px;justify-content:center;
       padding:10px 0 18px;
@@ -50,7 +61,7 @@
     header img.logo{height:28px;width:auto;display:block}
     header .brand{font-weight:700;letter-spacing:.2px}
 
-    /* HERO */
+    /* Hero */
     .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 0 12px}
     .hero .icon{
       width:112px;height:112px;border-radius:28px;background:#0f172a;
@@ -60,24 +71,18 @@
     .hero .icon img{width:86px;height:86px;border-radius:20px}
     .hero h1{font-size:38px;letter-spacing:-.5px;margin:6px 0 8px}
     .hero p.lead{color:var(--muted);max-width:600px;margin:0 auto 18px}
-    .cta{
-      display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:8px 0 0
-    }
-    .btn{
-      appearance:none;border:0;border-radius:14px;padding:12px 18px;
-      font-weight:600;cursor:pointer
-    }
+    .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:8px 0 0}
+    .btn{appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:600;cursor:pointer}
     .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(255,122,61,.3)}
     .btn-ghost{background:var(--accent-weak);color:var(--accent)}
     .note{font-size:.9rem;color:var(--muted);margin-top:8px}
 
-    /* PANEL / SECTIONS */
+    /* Sections / panel */
     section{margin:28px 0}
-    .panel{
-      background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-      padding:20px 18px
-    }
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px}
     h2{font-size:22px;margin:0 0 14px}
+
+    /* Features */
     .features{display:grid;grid-template-columns:1fr;gap:12px}
     .feature{display:flex;gap:12px;padding:10px;border-radius:12px}
     .feature .dot{
@@ -87,39 +92,39 @@
     .feature h3{font-size:1rem;margin:0 0 4px}
     .feature p{margin:0;color:var(--muted);font-size:.95rem}
 
-    /* Screenshots */
-    .screens{display:grid;grid-template-columns:1fr;gap:14px}
+    /* Screenshots: 1 col mobile, 2 cols desktop */
+    .screens{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      align-items:start;
+    }
     .shot{
       background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px;
-      box-shadow:0 8px 24px rgba(0,0,0,.05)
+      box-shadow:0 8px 24px rgba(0,0,0,.05);overflow:hidden;
     }
     .shot img{width:100%;height:auto;border-radius:16px;display:block}
+    .shot-sm{max-width:320px;justify-self:center}
+    @media (min-width: 900px){
+      .hero h1{font-size:46px}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .screens{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
 
     /* Contact */
     form .row{display:grid;grid-template-columns:1fr;gap:10px}
     input,textarea{
-      width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
-      background:#fff;font:inherit
+      width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit
     }
     textarea{min-height:120px;resize:vertical}
     .success{display:none;margin-top:8px;color:#15803d}
     .error{display:none;margin-top:8px;color:#b91c1c}
 
-    footer{
-      text-align:center;color:var(--muted);
-      margin:26px 0 18px
-    }
-
-    /* Wider screens */
-    @media (min-width: 760px){
-      .features{grid-template-columns:repeat(2,1fr)}
-      .screens{grid-template-columns:repeat(3,1fr)}
-      .hero h1{font-size:46px}
-    }
+    /* Footer */
+    footer{text-align:center;color:var(--muted);margin:26px 0 18px}
   </style>
 </head>
 <body>
-
   <div class="wrap">
     <header aria-label="LiftForge">
       <img class="logo" src="assets/liftforge-logo.svg" alt="LiftForge flame LF logo" />
@@ -129,16 +134,13 @@
     <main>
       <!-- HERO -->
       <section class="hero">
-        <div class="icon">
-          <img src="assets/app-icon.png" alt="LiftForge app icon" />
-        </div>
+        <div class="icon"><img src="assets/app-icon.png" alt="LiftForge app icon" /></div>
         <h1>Progress, made easy.</h1>
         <p class="lead">
           A clean, no-login strength app. Start a 5×5 program in seconds or build your own.
           Resume workouts, rest timer with notifications, and a history that actually helps.
         </p>
         <div class="cta">
-          <!-- Ønsker du å skjule TestFlight offentlig? Kommenter ut knappen under. -->
           <a class="btn btn-primary" href="https://testflight.apple.com/join/3GmutBGT">Join TestFlight</a>
           <a class="btn btn-ghost" href="#contact">Get updates</a>
         </div>
@@ -149,67 +151,23 @@
       <section class="panel" id="features">
         <h2>Why LiftForge?</h2>
         <div class="features">
-          <div class="feature">
-            <div class="dot">✓</div>
-            <div>
-              <h3>No accounts</h3>
-              <p>Open the app and lift. Nothing to create, nothing to forget.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="dot">✓</div>
-            <div>
-              <h3>Simple progression</h3>
-              <p>StrongLifts-style 5×5 included, or map your own week and repeat.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="dot">✓</div>
-            <div>
-              <h3>Resume anytime</h3>
-              <p>Close the app mid-set; reopen to Continue Workout right where you left off.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="dot">✓</div>
-            <div>
-              <h3>Rest timer done right</h3>
-              <p>Background countdown and a notification when it's time to lift again.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="dot">✓</div>
-            <div>
-              <h3>Bonus days & notes</h3>
-              <p>Optional accessory sessions you can tweak on the fly — add or remove exercises.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="dot">✓</div>
-            <div>
-              <h3>History & progress</h3>
-              <p>Session log and progress chart (weight or estimated 1RM). No noise.</p>
-            </div>
-          </div>
+          <div class="feature"><div class="dot">✓</div><div><h3>No accounts</h3><p>Open the app and lift. Nothing to create, nothing to forget.</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>Simple progression</h3><p>StrongLifts-style 5×5 included, or map your own week and repeat.</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>Resume anytime</h3><p>Close the app mid-set; reopen to Continue Workout right where you left off.</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>Rest timer done right</h3><p>Background countdown and a notification when it's time to lift again.</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>Bonus days & notes</h3><p>Optional accessory sessions you can tweak on the fly — add or remove exercises.</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>History & progress</h3><p>Session log and progress chart (weight or estimated 1RM). No noise.</p></div></div>
         </div>
       </section>
 
-            <!-- SCREENSHOTS -->
+      <!-- SCREENSHOTS -->
       <section class="panel" id="screenshots">
         <h2>Screenshots</h2>
         <div class="screens">
-          <div class="shot">
-            <img src="assets/shots/screenshot-home.jpg" alt="Home showing today's plan and start session" loading="lazy">
-          </div>
-          <div class="shot">
-            <img src="assets/shots/screenshot-session.jpg" alt="Session with weight, reps and rest timer" loading="lazy">
-          </div>
-          <div class="shot">
-            <img src="assets/shots/screenshot-bonus.jpg" alt="Bonus workout setup" loading="lazy">
-          </div>
-          <div class="shot shot-sm">
-            <img src="assets/shots/screenshot-progress.jpg" alt="Progress chart" loading="lazy">
-          </div>
+          <div class="shot"><img src="assets/shots/screenshot-home.jpg" alt="Home showing today's plan and start session" loading="lazy"></div>
+          <div class="shot"><img src="assets/shots/screenshot-session.jpg" alt="Session with weight, reps and rest timer" loading="lazy"></div>
+          <div class="shot"><img src="assets/shots/screenshot-bonus.jpg" alt="Bonus workout setup" loading="lazy"></div>
+          <div class="shot shot-sm"><img src="assets/shots/screenshot-progress.jpg" alt="Progress chart" loading="lazy"></div>
         </div>
       </section>
 
@@ -235,7 +193,6 @@
             <div class="success" id="okMsg">Thanks — we’ll be in touch.</div>
             <div class="error" id="errMsg">Something went wrong. Please try again.</div>
           </div>
-          <!-- Honeypot -->
           <input type="text" name="_gotcha" style="display:none">
         </form>
       </section>
@@ -247,28 +204,21 @@
   </div>
 
   <script>
-    // year
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Formspree success message without navigating away
+    // Formspree (AJAX + inline success)
     const form = document.getElementById('contactForm');
     const ok = document.getElementById('okMsg');
     const err = document.getElementById('errMsg');
-
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const data = new FormData(form);
       try{
         const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
-        if(res.ok){
-          ok.style.display = 'block'; err.style.display = 'none';
-          form.reset();
-        } else {
-          err.style.display = 'block'; ok.style.display = 'none';
-        }
-      }catch{
-        err.style.display = 'block'; ok.style.display = 'none';
-      }
+        if(res.ok){ ok.style.display='block'; err.style.display='none'; form.reset(); }
+        else { err.style.display='block'; ok.style.display='none'; }
+      }catch{ err.style.display='block'; ok.style.display='none'; }
     });
   </script>
 </body>
