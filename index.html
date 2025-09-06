@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>LiftForge — Progress, made easy.</title>
+  <title>LiftForge™ — Progress, made easy.</title>
   <meta name="description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
   <link rel="canonical" href="https://liftforge.app/" />
 
   <!-- Icons -->
-  <link rel="icon" href="/favicon_tm.ico">
-  <link rel="apple-touch-icon" href="/apple_touch_tm.png">
+  <link rel="icon" href="/assets/favicon_tm.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple_touch_tm.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://liftforge.app/" />
-  <meta property="og:title" content="LiftForge — Progress, made easy." />
+  <meta property="og:title" content="LiftForge™ — Progress, made easy." />
   <meta property="og:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
   <meta property="og:image" content="https://liftforge.app/assets/og_image_tm.png" />
   <meta property="og:image:secure_url" content="https://liftforge.app/assets/og_image_tm.png" />
@@ -24,9 +24,9 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LiftForge — Progress, made easy." />
+  <meta name="twitter:title" content="LiftForge™ — Progress, made easy." />
   <meta name="twitter:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
-  <meta name="twitter:image" content="https://liftforge.app/assets/og-image.png?v=3" />
+  <meta name="twitter:image" content="https://liftforge.app/assets/og_image_tm.png" />
 
   <style>
     :root{
@@ -60,7 +60,8 @@
       padding:10px 0 18px;
     }
     header img.logo{height:28px;width:auto;display:block}
-    header .brand{font-weight:700;letter-spacing:.2px}
+    header .brand{font-weight:700;letter-spacing:.2px;display:flex;align-items:baseline;gap:4px}
+    header .brand .tm{font-size:.7em;opacity:.9;vertical-align:top}
 
     /* Hero */
     .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 0 12px}
@@ -123,19 +124,20 @@
 
     /* Footer */
     footer{text-align:center;color:var(--muted);margin:26px 0 18px}
+    footer .small{font-size:.9rem;margin-top:6px}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header aria-label="LiftForge">
-      <img class="logo" src="assets/liftforge-logo.svg" alt="LiftForge flame LF logo" />
-      <div class="brand">LiftForge</div>
+    <header aria-label="LiftForge™">
+      <img class="logo" src="/assets/liftforge-logo.svg" alt="LiftForge flame LF logo" />
+      <div class="brand">LiftForge<span class="tm">™</span></div>
     </header>
 
     <main>
       <!-- HERO -->
       <section class="hero">
-        <div class="icon"><img src="assets/app_icon_tm.png" alt="LiftForge app icon" /></div>
+        <div class="icon"><img src="/assets/app_icon_tm.png" alt="LiftForge app icon" /></div>
         <h1>Progress, made easy.</h1>
         <p class="lead">
           A clean, no-login strength app. Start a 5×5 program in seconds or build your own.
@@ -150,7 +152,7 @@
 
       <!-- FEATURES -->
       <section class="panel" id="features">
-        <h2>Why LiftForge?</h2>
+        <h2>Why LiftForge™?</h2>
         <div class="features">
           <div class="feature"><div class="dot">✓</div><div><h3>No accounts</h3><p>Open the app and lift. Nothing to create, nothing to forget.</p></div></div>
           <div class="feature"><div class="dot">✓</div><div><h3>Simple progression</h3><p>StrongLifts-style 5×5 included, or map your own week and repeat.</p></div></div>
@@ -165,10 +167,10 @@
       <section class="panel" id="screenshots">
         <h2>Screenshots</h2>
         <div class="screens">
-          <div class="shot"><img src="assets/shots/screenshot-home.jpg" alt="Home showing today's plan and start session" loading="lazy"></div>
-          <div class="shot"><img src="assets/shots/screenshot-session.jpg" alt="Session with weight, reps and rest timer" loading="lazy"></div>
-          <div class="shot"><img src="assets/shots/Screenshot-plan.jpg" alt="View plan" loading="lazy"></div>
-          <div class="shot"><img src="assets/shots/screenshot-progress.jpg" alt="Progress chart" loading="lazy"></div>
+          <div class="shot"><img src="/assets/shots/screenshot-home.jpg" alt="Home showing today's plan and start session" loading="lazy"></div>
+          <div class="shot"><img src="/assets/shots/screenshot-session.jpg" alt="Session with weight, reps and rest timer" loading="lazy"></div>
+          <div class="shot"><img src="/assets/shots/Screenshot-plan.jpg" alt="View plan" loading="lazy"></div>
+          <div class="shot"><img src="/assets/shots/screenshot-progress.jpg" alt="Progress chart" loading="lazy"></div>
         </div>
       </section>
 
@@ -176,7 +178,7 @@
       <section class="panel" id="privacy">
         <h2>Privacy</h2>
         <p style="margin:0; color:var(--muted)">
-          LiftForge stores your data locally on your device. There’s no account and no cloud sync.
+          LiftForge™ stores your data locally on your device. There’s no account and no cloud sync.
           Delete the app to delete the data. That’s it.
         </p>
       </section>
@@ -200,7 +202,8 @@
     </main>
 
     <footer>
-      <div>&copy; <span id="year"></span> LiftForge</div>
+      <div>&copy; <span id="year"></span> LiftForge™</div>
+      <div class="small">LiftForge™ is a trademark of Sondre Våge Haram. All rights reserved.</div>
     </footer>
   </div>
 
