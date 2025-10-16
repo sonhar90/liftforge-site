@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>LiftForge™ — Progress, made easy.</title>
-  <meta name="description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
+  <meta name="description" content="Simple, no-login strength training. 5×5 built-in or build your own. A clean training diary that tracks progress per exercise and auto‑progresses after each completed session." />
   <link rel="canonical" href="https://liftforge.app/" />
 
   <!-- Icons -->
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://liftforge.app/" />
   <meta property="og:title" content="LiftForge™ — Progress, made easy." />
-  <meta property="og:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
+  <meta property="og:description" content="Simple, no-login strength training. 5×5 built-in or build your own. A clean training diary that tracks progress per exercise and auto‑progresses after each completed session." />
   <meta property="og:image" content="https://liftforge.app/assets/og_image_tm.png" />
   <meta property="og:image:secure_url" content="https://liftforge.app/assets/og_image_tm.png" />
   <meta property="og:image:width" content="1200" />
@@ -25,8 +25,69 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="LiftForge™ — Progress, made easy." />
-  <meta name="twitter:description" content="Simple, no-login strength training. 5×5 built-in or build your own." />
+  <meta name="twitter:description" content="Simple, no-login strength training. 5×5 built-in or build your own. A clean training diary that tracks progress per exercise and auto‑progresses after each completed session." />
   <meta name="twitter:image" content="https://liftforge.app/assets/og_image_tm.png" />
+
+  <!-- OPTIONAL: Smart App Banner (replace APP_ID) -->
+  <!-- <meta name="apple-itunes-app" content="app-id=APP_ID_HERE, app-argument=https://liftforge.app/"> -->
+
+  <!-- JSON-LD: MobileApplication (update APP_STORE_URL and APP_ID) -->
+  <script type=\"application/ld+json\">
+  {
+    \"@context\": \"https://schema.org\",
+    \"@type\": \"FAQPage\",
+    \"mainEntity\": [
+      {
+        \"@type\": \"Question\",
+        \"name\": \"Do I need an account?\",
+        \"acceptedAnswer\": {
+          \"@type\": \"Answer\",
+          \"text\": \"No. LiftForge works without accounts. Your data stays on your device.\"
+        }
+      },
+      {
+        \"@type\": \"Question\",
+        \"name\": \"Does it work offline?\",
+        \"acceptedAnswer\": {
+          \"@type\": \"Answer\",
+          \"text\": \"Yes. Plans, logging, history and progress work offline.\"
+        }
+      },
+      {
+        \"@type\": \"Question\",
+        \"name\": \"Is there a 5×5 program?\",
+        \"acceptedAnswer\": {
+          \"@type\": \"Answer\",
+          \"text\": \"Yes. Start a StrongLifts-style 5×5 in seconds or build your own plan.\"
+        }
+      },
+      {
+        \"@type\": \"Question\",
+        \"name\": \"Does it track progress automatically?\",
+        \"acceptedAnswer\": {
+          \"@type\": \"Answer\",
+          \"text\": \"Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto‑progresses after each completed session.\"
+        }
+      },
+      {
+        \"@type\": \"Question\",
+        \"name\": \"How do rest timer notifications work?\",
+        \"acceptedAnswer\": {
+          \"@type\": \"Answer\",
+          \"text\": \"LiftForge runs a background countdown and notifies you when it's time to lift again.\"
+        }
+      },
+      {
+        \"@type\": \"Question\",
+        \"name\": \"What about privacy?\",
+        \"acceptedAnswer\": {
+          \"@type\": \"Answer\",
+          \"text\": \"Your data stays on your device. Delete the app to delete the data.\"
+        }
+      }
+    ]
+  }
+  <\/script>
 
   <style>
     :root{
@@ -57,7 +118,7 @@
     /* Header */
     header{
       display:flex;align-items:center;gap:12px;
-      justify-content:space-between; /* endret fra center */
+      justify-content:space-between;
       padding:10px 0 18px;
     }
     header .left{display:flex;align-items:center;gap:12px}
@@ -127,6 +188,11 @@
     /* Footer */
     footer{text-align:center;color:var(--muted);margin:26px 0 18px}
     footer .small{font-size:.9rem;margin-top:6px}
+
+    /* FAQ list styling */
+    .faq{margin-top:8px}
+    .faq details{border-top:1px solid var(--line);padding:10px 0}
+    .faq summary{cursor:pointer;font-weight:600}
   </style>
 </head>
 <body>
@@ -137,7 +203,6 @@
         <div class="brand">LiftForge<span class="tm">™</span></div>
       </div>
 
-      <!-- NAV lagt til her -->
       <nav style="margin-left:auto; display:flex; gap:14px; font-size:.95rem">
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>
@@ -151,10 +216,12 @@
         <h1>Progress, made easy.</h1>
         <p class="lead">
           A clean, no-login strength app. Start a 5×5 program in seconds or build your own.
+          It doubles as a simple training diary that tracks progress on every exercise and auto‑progresses after each completed session.
           Resume workouts, rest timer with notifications, and a history that actually helps.
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="https://testflight.apple.com/join/3GmutBGT">Join TestFlight</a>
+          <!-- UPDATE APP_STORE_URL -->
+          <a class="btn btn-primary" href="APP_STORE_URL">Download on the App Store</a>
           <a class="btn btn-ghost" href="#contact">Get updates</a>
         </div>
         <div class="note">No accounts. Works offline. Your data stays on your device.</div>
@@ -169,7 +236,7 @@
           <div class="feature"><div class="dot">✓</div><div><h3>Resume anytime</h3><p>Close the app mid-set; reopen to Continue Workout right where you left off.</p></div></div>
           <div class="feature"><div class="dot">✓</div><div><h3>Rest timer done right</h3><p>Background countdown and a notification when it's time to lift again.</p></div></div>
           <div class="feature"><div class="dot">✓</div><div><h3>Bonus days & notes</h3><p>Optional accessory sessions you can tweak on the fly — add or remove exercises.</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>History & progress</h3><p>Session log and progress chart (weight or estimated 1RM). No noise.</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>Training diary & progress<\/h3><p>Tracks progress on every exercise and auto‑progresses after each completed session — plus a clean session log and progress chart (weight & e1RM).<\/p></div></div>
         </div>
       </section>
 
@@ -191,6 +258,19 @@
           LiftForge™ stores your data locally on your device. There’s no account and no cloud sync.
           Delete the app to delete the data. That’s it.
         </p>
+      </section>
+
+      <!-- FAQ (mirrors JSON-LD to help humans, too) -->
+      <section class="panel" id="faq">
+        <h2>FAQ</h2>
+        <div class=\"faq\">
+          <details><summary>Do I need an account?<\/summary><p>No. LiftForge works without accounts. Your data stays on your device.<\/p><\/details>
+          <details><summary>Does it work offline?<\/summary><p>Yes. Plans, logging, history and progress work offline.<\/p><\/details>
+          <details><summary>Is there a 5×5 program?<\/summary><p>Yes. Start a StrongLifts-style 5×5 in seconds or build your own plan.<\/p><\/details>
+          <details><summary>Does it track progress automatically?<\/summary><p>Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto‑progresses after each completed session.<\/p><\/details>
+          <details><summary>How do rest timer notifications work?<\/summary><p>LiftForge runs a background countdown and notifies you when it's time to lift again.<\/p><\/details>
+          <details><summary>What about privacy?<\/summary><p>Your data stays on your device. Delete the app to delete the data.<\/p><\/details>
+        <\/div>
       </section>
 
       <!-- CONTACT -->
