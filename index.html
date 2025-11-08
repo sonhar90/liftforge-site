@@ -39,7 +39,7 @@
     "name": "LiftForge",
     "operatingSystem": "iOS",
     "applicationCategory": "https://schema.org/FitnessApplication",
-    "description": "A clean, no-login strength app. It doubles as a simple training diary that tracks progress on every exercise and auto‑progresses after each completed session. Works offline. Rest timer with notifications. History & progress.",
+    "description": "A clean, no-login strength app. It doubles as a simple training diary that tracks progress on every exercise and auto-progresses after each completed session. Works offline. Rest timer with notifications. History & progress.",
     "inLanguage": "en",
     "isAccessibleForFree": true,
     "installUrl": "https://apps.apple.com/no/app/liftforge/id6751549489?l=nb",
@@ -56,7 +56,7 @@
       "StrongLifts-style 5×5 or custom plan",
       "Built-in templates: Upper/Lower, 5/3/1, Hypertrophy, Calisthenics, Machines, Glutes & Core",
       "Simple training diary that tracks progress on every exercise",
-      "Auto‑progression after each completed session",
+      "Auto-progression after each completed session",
       "Resume mid-set; Continue Workout",
       "Rest timer with notifications",
       "Session log & progress chart (weight & e1RM)"
@@ -82,7 +82,7 @@
       {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. LiftForge works without accounts. Your data stays on your device."}},
       {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. Plans, logging, history and progress work offline."}},
       {"@type":"Question","name":"Is there a 5×5 program?","acceptedAnswer":{"@type":"Answer","text":"Yes. Start a StrongLifts-style 5×5 in seconds or build your own plan."}},
-      {"@type":"Question","name":"Does it track progress automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto‑progresses after each completed session."}},
+      {"@type":"Question","name":"Does it track progress automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto-progresses after each completed session."}},
       {"@type":"Question","name":"Does LiftForge include more than 5×5?","acceptedAnswer":{"@type":"Answer","text":"Yes. Templates include Upper/Lower (4d), 5/3/1 (4d), Hypertrophy (5d), Calisthenics (3d), Machines (3d) and Glutes & Core (3d)."}},
       {"@type":"Question","name":"How do rest timer notifications work?","acceptedAnswer":{"@type":"Answer","text":"LiftForge runs a background countdown and notifies you when it's time to lift again."}},
       {"@type":"Question","name":"What about privacy?","acceptedAnswer":{"@type":"Answer","text":"Your data stays on your device. Delete the app to delete the data."}}
@@ -110,7 +110,7 @@
     .hero p.lead{color:var(--muted);max-width:720px;margin:0 auto 18px}
     .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:8px 0 0}
     .btn{appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:600;cursor:pointer}
-    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(255,122,61,.3)}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.3)}
     .btn-ghost{background:var(--accent-weak);color:var(--accent)}
     .note{font-size:.9rem;color:var(--muted);margin-top:8px}
     section{margin:28px 0}
@@ -136,6 +136,25 @@
     .faq{margin-top:8px}
     .faq details{border-top:1px solid var(--line);padding:10px 0}
     .faq summary{cursor:pointer;font-weight:600}
+
+    /* Programs (new) */
+    .program-grid{ display:grid; grid-template-columns:1fr; gap:12px; }
+    .program-card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+      background:#fff;
+      box-shadow:0 6px 16px rgba(0,0,0,.04);
+    }
+    .program-card h3{ margin:0 0 6px; font-size:1rem; letter-spacing:.2px; }
+    .pill{
+      display:inline-block; padding:4px 8px; border-radius:999px;
+      background:var(--accent-weak); color:var(--accent); font-weight:600; font-size:.8rem;
+      margin-left:8px; vertical-align:middle;
+    }
+    .program-card p{ margin:6px 0 0; color:var(--muted); font-size:.95rem; line-height:1.5; }
+    .program-foot{ margin-top:10px; font-size:.9rem; color:#4b5563; }
+    @media (min-width:900px){ .program-grid{ grid-template-columns:repeat(2,1fr) } }
   </style>
 </head>
 <body>
@@ -158,17 +177,15 @@
         <h1>Progress, made easy.</h1>
         <p class="lead">
           A clean, no-login strength app.
-         
-          
         </p>
         <div class="cta">
-          <a class="btn btn-primary" href="https://apps.apple.com/no/app/liftforge/id6751549489?l=nb">Download on the App Store</a>
+          <a class="btn btn-primary" href="https://apps.apple.com/no/app/liftforge/id6751549489?l=nb">Download on the App Store</a>
           <a class="btn btn-ghost" href="#contact">Get updates</a>
         </div>
         <div class="note">No accounts. Works offline. Your data stays on your device.</div>
       </section>
 
-      <!-- ABOUT (semantic content for AI & humans) -->
+      <!-- ABOUT -->
       <section class="panel" id="about">
         <h2>About LiftForge</h2>
         <p>
@@ -181,7 +198,7 @@
         </p>
       </section>
 
-      <!-- DIFFERENTIATION (neutral comparison) -->
+      <!-- DIFFERENTIATION -->
       <section class="panel" id="compare">
         <h2>How it’s different</h2>
         <p>
@@ -197,81 +214,64 @@
         <div class="features">
           <div class="feature"><div class="dot">✓</div><div><h3>No accounts</h3><p>Open the app and lift. Nothing to create, nothing to forget.</p></div></div>
           <div class="feature"><div class="dot">✓</div><div><h3>Simple progression</h3><p>StrongLifts-style 5×5 included, or map your own week and repeat.</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>Training diary & progress</h3><p>Tracks progress on every exercise and auto‑progresses after each completed session — plus a clean session log and progress chart (weight & e1RM).</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>Training diary & progress</h3><p>Tracks progress on every exercise and auto-progresses after each completed session — plus a clean session log and progress chart (weight & e1RM).</p></div></div>
           <div class="feature"><div class="dot">✓</div><div><h3>Rest timer done right</h3><p>Background countdown and a notification when it's time to lift again.</p></div></div>
           <div class="feature"><div class="dot">✓</div><div><h3>Bonus days & notes</h3><p>Optional accessory sessions you can tweak on the fly — add or remove exercises.</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>Built‑in programs</h3><p>Not just 5×5: Upper/Lower (4d), 5/3/1 (4d), Hypertrophy (5d), Calisthenics (3d), Machines (3d), Glutes & Core (3d).</p></div></div>
+          <div class="feature"><div class="dot">✓</div><div><h3>Built-in programs</h3><p>Not just 5×5: Upper/Lower (4d), 5/3/1 (4d), Hypertrophy (5d), Calisthenics (3d), Machines (3d), Glutes & Core (3d).</p></div></div>
         </div>
       </section>
 
-      <!-- PROGRAMS -->
-<section class="panel" id="programs">
-  <h2>Programs included (examples)</h2>
-  <p style="margin:0; color:var(--muted)">Pick a preset and lift today — every plan is editable.</p>
+      <!-- PROGRAMS (updated) -->
+      <section class="panel" id="programs">
+        <h2>Programs included</h2>
+        <p style="margin:0; color:var(--muted)">Pick a preset and lift today — every plan is editable.</p>
 
-  <ul style="margin:10px 0 0; padding-left:18px; color:var(--muted)">
-    <li>
-      <strong>Beginner 5×5 (3d/week):</strong> Simple full-body strength with A/B days.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Includes the big barbell lifts (squat, press, pull) with small, steady progress built in.
-      </div>
-    </li>
+        <div class="program-grid" style="margin-top:12px">
+          <div class="program-card">
+            <h3>Beginner 5×5 (3d/week) <span class="pill">Beginner</span></h3>
+            <p>Full-body A/B days that build strength fast with small, steady jumps. The big barbell lifts—squat, press, pull—kept simple so you can focus on form and progress.</p>
+          </div>
 
-    <li>
-      <strong>Upper/Lower Balanced (4d):</strong> Even focus on upper and lower body across the week.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Push, pull, legs and core covered with moderate volume for visible strength and size gains.
-      </div>
-    </li>
+          <div class="program-card">
+            <h3>Upper/Lower Balanced (4d) <span class="pill">Intermediate</span></h3>
+            <p>Even coverage for chest, back, legs and core across the week. Moderate volume for clear strength and size gains without burning out.</p>
+          </div>
 
-    <li>
-      <strong>5/3/1 Classic (4d):</strong> Proven strength framework with supportive accessory work.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Main lifts drive long-term PRs; accessory blocks add muscle and reinforce technique.
-      </div>
-    </li>
+          <div class="program-card">
+            <h3>5/3/1 Classic (4d) <span class="pill">Interm./Adv.</span></h3>
+            <p>A proven strength framework on the main lifts, supported by accessories that add muscle and reinforce technique—ideal for long-term PRs.</p>
+          </div>
 
-    <li>
-      <strong>UL + Push/Pull/Legs (5d Hypertrophy):</strong> High-frequency split for fast physique changes.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Combines upper/lower and PPL to maximize weekly quality sets across all major muscle groups.
-      </div>
-    </li>
+          <div class="program-card">
+            <h3>UL + Push/Pull/Legs (5d Hypertrophy) <span class="pill">Advanced</span></h3>
+            <p>High-frequency split for fast physique changes. Combines Upper/Lower and PPL to maximize quality weekly sets across all major muscle groups.</p>
+          </div>
 
-    <li>
-      <strong>Mixed Strength/Hypertrophy (5d):</strong> Strength days, pump days, and a density finisher.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Heavy compounds early week, higher-rep accessories midweek, fast-paced density work to cap it.
-      </div>
-    </li>
+          <div class="program-card">
+            <h3>Mixed Strength/Hypertrophy (5d) <span class="pill">Advanced</span></h3>
+            <p>Heavy compound days, higher-rep pump work, and a fast density finisher. Strength you can feel, volume where it counts.</p>
+          </div>
 
-    <li>
-      <strong>Beginner Machines (3d):</strong> Safe, confidence-building full-body sessions.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Guided machines for chest, back, legs, shoulders, and arms — easy to learn, easy to progress.
-      </div>
-    </li>
+          <div class="program-card">
+            <h3>Beginner Machines (3d) <span class="pill">Beginner</span></h3>
+            <p>Confidence-building full-body sessions on machines. Easy to learn, easy to progress—perfect if you’re new or returning to training.</p>
+          </div>
 
-    <li>
-      <strong>Calisthenics Hypertrophy (3d):</strong> Bodyweight push/pull/legs with smart progressions.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Push-ups, dips, pull-ups, rows, lunges and core — build muscle with minimal equipment.
-      </div>
-    </li>
+          <div class="program-card">
+            <h3>Calisthenics Hypertrophy (3d) <span class="pill">All Levels</span></h3>
+            <p>Bodyweight push/pull/legs with smart progressions. Push-ups, dips, pull-ups, rows, lunges and core—build muscle with minimal equipment.</p>
+          </div>
 
-    <li>
-      <strong>Glutes & Core (3d):</strong> Shape, strength, and stability you’ll feel in every lift.
-      <div style="margin-top:4px; font-size:.95rem; color:#4b5563;">
-        Hip-dominant compounds plus core stability work for power, posture, and carryover to sport.
-      </div>
-    </li>
-  </ul>
+          <div class="program-card">
+            <h3>Glutes & Core (3d) <span class="pill">All Levels</span></h3>
+            <p>Hip-dominant strength plus core stability for power, posture and carryover to every other lift.</p>
+          </div>
+        </div>
 
-  <p style="margin:12px 0 0; color:#4b5563; font-size:.95rem;">
-    Make any plan yours: swap exercises, adjust volume, and save your own templates.
-  </p>
-</section>
-
+        <div class="program-foot">
+          Make any plan yours — swap exercises, adjust volume, and save your own templates.
+        </div>
+      </section>
 
       <!-- SCREENSHOTS -->
       <section class="panel" id="screenshots">
@@ -300,7 +300,7 @@
           <details><summary>Do I need an account?</summary><p>No. LiftForge works without accounts. Your data stays on your device.</p></details>
           <details><summary>Does it work offline?</summary><p>Yes. Plans, logging, history and progress work offline.</p></details>
           <details><summary>Is there a 5×5 program?</summary><p>Yes. Start a StrongLifts-style 5×5 in seconds or build your own plan.</p></details>
-          <details><summary>Does it track progress automatically?</summary><p>Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto‑progresses after each completed session.</p></details>
+          <details><summary>Does it track progress automatically?</summary><p>Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto-progresses after each completed session.</p></details>
           <details><summary>Does LiftForge include more than 5×5?</summary><p>Yes. Templates include Upper/Lower (4d), 5/3/1 (4d), Hypertrophy (5d), Calisthenics (3d), Machines (3d) and Glutes & Core (3d).</p></details>
           <details><summary>How do rest timer notifications work?</summary><p>LiftForge runs a background countdown and notifies you when it's time to lift again.</p></details>
           <details><summary>What about privacy?</summary><p>Your data stays on your device. Delete the app to delete the data.</p></details>
