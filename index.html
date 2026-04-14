@@ -1,37 +1,31 @@
+Her er den rene filen — kopier alt og lim inn i GitHub:
+
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>LiftForge™ — Progress, made easy.</title>
-  <meta name="description" content="Simple, no-login strength training. 5×5 built-in or build your own. Includes ready-to-use templates like Upper/Lower, 5/3/1, Hypertrophy, Calisthenics, Machines, and Glutes & Core." />
+  <meta name="theme-color" content="#0b0b0c" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>LiftForge — Progress, made easy.</title>
+  <meta name="description" content="LiftForge is a simple, private strength tracker. Standard 5×5, Upper/Lower, 5/3/1 and more — auto-progression, rest timer, PR tracking. No accounts, works offline." />
   <link rel="canonical" href="https://liftforge.app/" />
-
-  <!-- Icons -->
   <link rel="icon" href="assets/favicon_tm.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple_touch_tm.png">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://liftforge.app/" />
-  <meta property="og:title" content="LiftForge™ — Progress, made easy." />
-  <meta property="og:description" content="Simple, no-login strength training. 5×5 built-in or build your own. Includes ready-to-use templates like Upper/Lower, 5/3/1, Hypertrophy, Calisthenics, Machines, and Glutes & Core." />
+  <meta property="og:title" content="LiftForge — Progress, made easy." />
+  <meta property="og:description" content="A clean, private strength tracker. No accounts, no cloud sync. Just lift and progress." />
   <meta property="og:image" content="https://liftforge.app/assets/og_image_tm.png" />
-  <meta property="og:image:secure_url" content="https://liftforge.app/assets/og_image_tm.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="LiftForge™ — Progress, made easy." />
-  <meta name="twitter:description" content="Simple, no-login strength training. 5×5 built-in or build your own. Includes ready-to-use templates like Upper/Lower, 5/3/1, Hypertrophy, Calisthenics, Machines, and Glutes & Core." />
+  <meta name="twitter:title" content="LiftForge — Progress, made easy." />
+  <meta name="twitter:description" content="A clean, private strength tracker. No accounts, no cloud sync. Just lift and progress." />
   <meta name="twitter:image" content="https://liftforge.app/assets/og_image_tm.png" />
-
-  <!-- Smart App Banner -->
   <meta name="apple-itunes-app" content="app-id=6751549489, app-argument=https://liftforge.app/">
 
-  <!-- JSON-LD: MobileApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,315 +33,418 @@
     "name": "LiftForge",
     "operatingSystem": "iOS",
     "applicationCategory": "https://schema.org/FitnessApplication",
-    "description": "A clean, no-login strength app. It doubles as a simple training diary that tracks progress on every exercise and auto-progresses after each completed session. Works offline. Rest timer with notifications. History & progress.",
+    "description": "A clean, no-login strength app. Works offline. Auto-progression, rest timer, PR tracking, session history.",
     "inLanguage": "en",
     "isAccessibleForFree": true,
-    "installUrl": "https://apps.apple.com/no/app/liftforge/id6751549489?l=nb",
-    "downloadUrl": "https://apps.apple.com/no/app/liftforge/id6751549489?l=nb",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "url": "https://apps.apple.com/no/app/liftforge/id6751549489?l=nb",
-      "availability": "https://schema.org/InStock"
-    },
-    "featureList": [
-      "No account — works offline",
-      "StrongLifts-style 5×5 or custom plan",
-      "Built-in templates: Upper/Lower, 5/3/1, Hypertrophy, Calisthenics, Machines, Glutes & Core",
-      "Simple training diary that tracks progress on every exercise",
-      "Auto-progression after each completed session",
-      "Resume mid-set; Continue Workout",
-      "Rest timer with notifications",
-      "Session log & progress chart (weight & e1RM)"
-    ],
-    "screenshot": [
-      "https://liftforge.app/assets/shots/screenshot-home.jpg",
-      "https://liftforge.app/assets/shots/screenshot-session.jpg",
-      "https://liftforge.app/assets/shots/Screenshot-plan.jpg",
-      "https://liftforge.app/assets/shots/screenshot-progress.jpg"
-    ],
+    "installUrl": "https://apps.apple.com/no/app/liftforge/id6751549489",
+    "downloadUrl": "https://apps.apple.com/no/app/liftforge/id6751549489",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "publisher": { "@type": "Organization", "name": "LiftForge", "url": "https://liftforge.app" },
-    "privacyPolicy": { "@type": "CreativeWork", "url": "https://liftforge.app/privacy.html" },
-    "sameAs": ["https://apps.apple.com/no/app/liftforge/id6751549489?l=nb"]
+    "privacyPolicy": { "@type": "CreativeWork", "url": "https://liftforge.app/privacy.html" }
   }
   </script>
 
-  <!-- JSON-LD: FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. LiftForge works without accounts. Your data stays on your device."}},
-      {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. Plans, logging, history and progress work offline."}},
-      {"@type":"Question","name":"Is there a 5×5 program?","acceptedAnswer":{"@type":"Answer","text":"Yes. Start a StrongLifts-style 5×5 in seconds or build your own plan."}},
-      {"@type":"Question","name":"Does it track progress automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto-progresses after each completed session."}},
-      {"@type":"Question","name":"Does LiftForge include more than 5×5?","acceptedAnswer":{"@type":"Answer","text":"Yes. Templates include Upper/Lower (4d), 5/3/1 (4d), Hypertrophy (5d), Calisthenics (3d), Machines (3d) and Glutes & Core (3d)."}},
-      {"@type":"Question","name":"How do rest timer notifications work?","acceptedAnswer":{"@type":"Answer","text":"LiftForge runs a background countdown and notifies you when it's time to lift again."}},
-      {"@type":"Question","name":"What about privacy?","acceptedAnswer":{"@type":"Answer","text":"Your data stays on your device. Delete the app to delete the data."}}
+      {"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. LiftForge works without any account. Your data stays on your device."}},
+      {"@type":"Question","name":"Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely. Plans, logging, history and progress work without an internet connection."}},
+      {"@type":"Question","name":"How does auto-progression work?","acceptedAnswer":{"@type":"Answer","text":"After each successful session LiftForge automatically increases your working weights. If you miss reps it adjusts down."}},
+      {"@type":"Question","name":"What is included in Pro?","acceptedAnswer":{"@type":"Answer","text":"Pro adds unlimited saved sessions, full PR tracking with history, CSV export of your training log, and advanced progress charts."}}
     ]
   }
   </script>
 
   <style>
-    :root{ --bg:#fafafa; --panel:#ffffff; --text:#121212; --muted:#6b7280; --line:#ececec; --accent:#ff7a3d; --accent-weak: rgba(255,122,61,.12); --radius:16px; }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{ margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased; line-height:1.45; }
-    img{max-width:100%;height:auto;display:block}
-    a{color:var(--accent);text-decoration:none}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 20px}
-    header{ display:flex;align-items:center;gap:12px; justify-content:space-between; padding:10px 0 18px; }
-    header .left{display:flex;align-items:center;gap:12px}
-    header img.logo{height:28px;width:auto;display:block}
-    header .brand{font-weight:700;letter-spacing:.2px;display:flex;align-items:baseline;gap:4px}
-    header .brand .tm{font-size:.7em;opacity:.9;vertical-align:top}
-    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 0 12px}
-    .hero .icon{ width:112px;height:112px;border-radius:28px;background:#0f172a; display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.12); margin:10px 0 18px }
-    .hero .icon img{width:86px;height:86px;border-radius:20px}
-    .hero h1{font-size:38px;letter-spacing:-.5px;margin:6px 0 8px}
-    .hero p.lead{color:var(--muted);max-width:720px;margin:0 auto 18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:8px 0 0}
-    .btn{appearance:none;border:0;border-radius:14px;padding:12px 18px;font-weight:600;cursor:pointer}
-    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.3)}
-    .btn-ghost{background:var(--accent-weak);color:var(--accent)}
-    .note{font-size:.9rem;color:var(--muted);margin-top:8px}
-    section{margin:28px 0}
-    .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px}
-    h2{font-size:22px;margin:0 0 14px}
-    .features{display:grid;grid-template-columns:1fr;gap:12px}
-    .feature{display:flex;gap:12px;padding:10px;border-radius:12px}
-    .feature .dot{ width:28px;height:28px;border-radius:999px;display:grid;place-items:center; background:var(--accent-weak);color:var(--accent);font-weight:800;font-size:.9rem;flex:0 0 auto; }
-    .feature h3{font-size:1rem;margin:0 0 4px}
-    .feature p{margin:0;color:var(--muted);font-size:.95rem}
-    .screens{ display:grid; grid-template-columns:1fr; gap:14px; align-items:start; }
-    .shot{ background:#fff;border:1px solid var(--line);border-radius:20px;padding:12px; box-shadow:0 8px 24px rgba(0,0,0,.05);overflow:hidden; }
-    .shot img{width:100%;height:auto;border-radius:16px;display:block}
-    .shot-sm{max-width:320px;justify-self:center}
-    @media (min-width: 900px){ .hero h1{font-size:46px} .features{grid-template-columns:repeat(2,1fr)} .screens{grid-template-columns:repeat(2,minmax(0,1fr))} }
-    form .row{display:grid;grid-template-columns:1fr;gap:10px}
-    input,textarea{ width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;font:inherit }
-    textarea{min-height:120px;resize:vertical}
-    .success{display:none;margin-top:8px;color:#15803d}
-    .error{display:none;margin-top:8px;color:#b91c1c}
-    footer{text-align:center;color:var(--muted);margin:26px 0 18px}
-    footer .small{font-size:.9rem;margin-top:6px}
-    .faq{margin-top:8px}
-    .faq details{border-top:1px solid var(--line);padding:10px 0}
-    .faq summary{cursor:pointer;font-weight:600}
+    :root {
+      --bg: #0b0b0c;
+      --bg2: #111113;
+      --border: rgba(255,255,255,.08);
+      --fg: #f5f5f7;
+      --muted: #9aa0a6;
+      --muted2: #6b7280;
+      --accent: #ff7a45;
+      --accent-light: #ffd9cc;
+      --radius: 16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--fg);
+      -webkit-text-size-adjust: 100%; min-height: 100dvh;
+    }
+    a { color: var(--accent-light); text-decoration: none; }
+    .wrap { max-width: 860px; padding: 0 24px; margin: 0 auto; }
 
-    /* Programs (new) */
-    .program-grid{ display:grid; grid-template-columns:1fr; gap:12px; }
-    .program-card{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:14px;
-      background:#fff;
-      box-shadow:0 6px 16px rgba(0,0,0,.04);
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(11,11,12,.85);
+      backdrop-filter: saturate(180%) blur(16px);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--border);
     }
-    .program-card h3{ margin:0 0 6px; font-size:1rem; letter-spacing:.2px; }
-    .pill{
-      display:inline-block; padding:4px 8px; border-radius:999px;
-      background:var(--accent-weak); color:var(--accent); font-weight:600; font-size:.8rem;
-      margin-left:8px; vertical-align:middle;
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px; max-width: 860px; padding: 0 24px; margin: 0 auto;
     }
-    .program-card p{ margin:6px 0 0; color:var(--muted); font-size:.95rem; line-height:1.5; }
-    .program-foot{ margin-top:10px; font-size:.9rem; color:#4b5563; }
-    @media (min-width:900px){ .program-grid{ grid-template-columns:repeat(2,1fr) } }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; color: var(--fg); }
+    .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    .nav-links { display: flex; gap: 24px; font-size: 14px; }
+    .nav-links a { color: var(--muted); transition: color .15s; }
+    .nav-links a:hover { color: var(--fg); }
+
+    /* Hero */
+    .hero { padding: 80px 0 64px; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 14px; border-radius: 999px;
+      background: rgba(255,122,69,.12); border: 1px solid rgba(255,122,69,.2);
+      color: var(--accent-light); font-size: 13px; font-weight: 600; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(36px,6vw,60px); line-height: 1.08; letter-spacing: -.02em; margin-bottom: 20px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: 18px; color: var(--muted); max-width: 480px; margin: 0 auto 36px; }
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 22px; border-radius: 12px; font-size: 15px; font-weight: 600;
+      border: 1px solid var(--border); color: var(--fg); transition: opacity .15s;
+    }
+    .btn:hover { opacity: .85; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #1b1b1c; }
+    .hero-sub { margin-top: 16px; font-size: 13px; color: var(--muted2); }
+
+    /* Screenshots */
+    .shots {
+      display: flex; gap: 16px; justify-content: center;
+      overflow-x: auto; padding: 8px 24px 32px; scrollbar-width: none;
+    }
+    .shots::-webkit-scrollbar { display: none; }
+    .shots img {
+      height: 420px; width: auto; border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 64px rgba(0,0,0,.6); flex-shrink: 0;
+    }
+
+    /* Sections */
+    section { padding: 64px 0; }
+    .section-label {
+      font-size: 12px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
+    }
+    h2 { font-size: clamp(24px,3.5vw,36px); letter-spacing: -.015em; line-height: 1.2; margin-bottom: 16px; }
+    .section-lead { font-size: 17px; color: var(--muted); max-width: 520px; margin-bottom: 40px; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    /* Features */
+    .features { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    .feature { padding: 20px; border-radius: var(--radius); background: var(--bg2); border: 1px solid var(--border); }
+    .feature-icon { font-size: 22px; margin-bottom: 10px; }
+    .feature h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .feature p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* Programs */
+    .programs { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    .program {
+      padding: 18px 20px; border-radius: var(--radius);
+      background: var(--bg2); border: 1px solid var(--border);
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .prog-badge {
+      flex-shrink: 0; padding: 4px 8px; border-radius: 6px;
+      font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .prog-badge.beg { background: rgba(52,211,153,.12); color: #6ee7b7; }
+    .prog-badge.int { background: rgba(96,165,250,.12); color: #93c5fd; }
+    .prog-badge.adv { background: rgba(251,113,133,.12); color: #fda4af; }
+    .prog-badge.all { background: rgba(167,139,250,.12); color: #c4b5fd; }
+    .program h3 { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .program p { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+    /* Pricing */
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .plan { padding: 28px; border-radius: 20px; background: var(--bg2); border: 1px solid var(--border); }
+    .plan.pro {
+      background: linear-gradient(135deg,rgba(255,122,69,.08),rgba(255,122,69,.03));
+      border-color: rgba(255,122,69,.25);
+    }
+    .plan-name { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 8px; }
+    .plan.pro .plan-name { color: var(--accent); }
+    .plan-price { font-size: 36px; font-weight: 800; letter-spacing: -.02em; margin-bottom: 4px; }
+    .plan-price span { font-size: 16px; font-weight: 500; color: var(--muted); }
+    .plan-desc { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .plan-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; }
+    .plan-features li::before { content: "✓"; color: #34d399; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .plan-features li.dim { color: var(--muted); }
+    .plan-features li.dim::before { content: "—"; color: var(--muted2); }
+    .plan-cta { margin-top: 28px; }
+
+    /* Privacy strip */
+    .privacy-strip {
+      display: flex; gap: 28px; flex-wrap: wrap; padding: 28px;
+      border-radius: var(--radius); background: var(--bg2); border: 1px solid var(--border);
+    }
+    .priv-item { display: flex; align-items: flex-start; gap: 12px; flex: 1; min-width: 180px; }
+    .priv-icon { font-size: 20px; flex-shrink: 0; }
+    .priv-item h3 { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .priv-item p { font-size: 13px; color: var(--muted); }
+
+    /* FAQ */
+    .faq { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .faq details { padding: 20px 22px; border-bottom: 1px solid var(--border); }
+    .faq details:last-child { border-bottom: none; }
+    .faq summary {
+      font-weight: 600; font-size: 15px; cursor: pointer; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--muted); font-size: 18px; font-weight: 400; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* Contact */
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    form { display: flex; flex-direction: column; gap: 12px; }
+    label { font-size: 13px; font-weight: 600; color: var(--muted); display: block; margin-bottom: 5px; }
+    input, textarea {
+      width: 100%; padding: 12px 14px; border-radius: 10px;
+      background: var(--bg2); border: 1px solid var(--border);
+      color: var(--fg); font: 15px/1.5 inherit;
+      -webkit-appearance: none; outline: none; transition: border-color .15s;
+    }
+    input:focus, textarea:focus { border-color: rgba(255,122,69,.4); }
+    textarea { min-height: 110px; resize: vertical; }
+    button[type=submit] {
+      padding: 13px; border-radius: 10px; background: var(--accent);
+      border: none; color: #1b1b1c; font: 600 15px/1 inherit; cursor: pointer; transition: opacity .15s;
+    }
+    button[type=submit]:hover { opacity: .9; }
+
+    /* Footer */
+    footer {
+      padding: 32px 0; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted2);
+    }
+    footer a { color: var(--muted2); }
+    footer a:hover { color: var(--muted); }
+    .footer-links { display: flex; gap: 20px; }
+
+    /* Responsive */
+    @media (max-width: 680px) {
+      .hero { padding: 56px 0 40px; }
+      .features, .programs, .pricing-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .shots img { height: 320px; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) { .nav-links { display: none; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header aria-label="LiftForge™">
-      <div class="left">
-        <img class="logo" src="assets/liftforge-logo.svg" alt="LiftForge flame LF logo" />
-        <div class="brand">LiftForge<span class="tm">™</span></div>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <img src="assets/app_icon_tm.png" alt="LiftForge icon" />
+        LiftForge™
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#programs">Programs</a>
+        <a href="#pricing">Pro</a>
+        <a href="#contact">Support</a>
       </div>
-      <nav style="margin-left:auto; display:flex; gap:14px; font-size:.95rem">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-      </nav>
-    </header>
+    </div>
+  </nav>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero">
-        <div class="icon"><img src="assets/app_icon_tm.png" alt="LiftForge app icon" /></div>
-        <h1>Progress, made easy.</h1>
-        <p class="lead">
-          A clean, no-login strength app.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="https://apps.apple.com/no/app/liftforge/id6751549489?l=nb">Download on the App Store</a>
-          <a class="btn btn-ghost" href="#contact">Get updates</a>
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-badge">v2 — Now with Pro</div>
+      <h1>Progress,<br/><span>made easy.</span></h1>
+      <p>A clean, private strength tracker. No accounts, no cloud. Just lift and get stronger.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="https://apps.apple.com/no/app/liftforge/id6751549489">Download on the App Store</a>
+        <a class="btn" href="#pricing">See Pro →</a>
+      </div>
+      <p class="hero-sub">Free to download · No account required · Works offline</p>
+    </div>
+  </div>
+
+  <div class="shots">
+    <img src="assets/shots/screenshot-home.jpg" alt="LiftForge home screen" loading="lazy" />
+    <img src="assets/shots/screenshot-session.jpg" alt="Active workout session" loading="lazy" />
+    <img src="assets/shots/Screenshot-plan.jpg" alt="12-week plan viewer" loading="lazy" />
+    <img src="assets/shots/screenshot-progress.jpg" alt="Progress chart" loading="lazy" />
+  </div>
+
+  <div class="wrap">
+    <hr />
+
+    <section id="features">
+      <div class="section-label">Features</div>
+      <h2>Everything you need.<br/>Nothing you don't.</h2>
+      <p class="section-lead">Built around one principle: get out of your way so you can train.</p>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🚫</div>
+          <h3>No accounts</h3>
+          <p>Open the app and lift. Nothing to create, nothing to forget. Your data stays on your device.</p>
         </div>
-        <div class="note">No accounts. Works offline. Your data stays on your device.</div>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="panel" id="about">
-        <h2>About LiftForge</h2>
-        <p>
-          LiftForge is a simple strength training app built for people who just want to lift and track their progress.
-          It works offline, needs no account, and automatically increases your weights when you complete a session.
-          You can follow 5×5, Upper/Lower, or Hypertrophy programs – or create your own.
-        </p>
-        <p>
-          If you’ve tried other workout trackers that require logins or cloud sync, LiftForge keeps it local, fast and private.
-        </p>
-      </section>
-
-      <!-- DIFFERENTIATION -->
-      <section class="panel" id="compare">
-        <h2>How it’s different</h2>
-        <p>
-          Most workout apps like Strong or FitNotes rely on accounts or cloud sync.
-          LiftForge works fully offline — nothing to sign up for, and nothing to track.
-          Just lift, log, and progress.
-        </p>
-      </section>
-
-      <!-- FEATURES -->
-      <section class="panel" id="features">
-        <h2>Why LiftForge™?</h2>
-        <div class="features">
-          <div class="feature"><div class="dot">✓</div><div><h3>No accounts</h3><p>Open the app and lift. Nothing to create, nothing to forget.</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>Simple progression</h3><p>StrongLifts-style 5×5 included, or map your own week and repeat.</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>Training diary & progress</h3><p>Tracks progress on every exercise and auto-progresses after each completed session — plus a clean session log and progress chart (weight & e1RM).</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>Rest timer done right</h3><p>Background countdown and a notification when it's time to lift again.</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>Bonus days & notes</h3><p>Optional accessory sessions you can tweak on the fly — add or remove exercises.</p></div></div>
-          <div class="feature"><div class="dot">✓</div><div><h3>Built-in programs</h3><p>Not just 5×5: Upper/Lower (4d), 5/3/1 (4d), Hypertrophy (5d), Calisthenics (3d), Machines (3d), Glutes & Core (3d).</p></div></div>
+        <div class="feature">
+          <div class="feature-icon">📶</div>
+          <h3>Fully offline</h3>
+          <p>No internet required, ever. Plans, logging, history and progress all work without a connection.</p>
         </div>
-      </section>
+        <div class="feature">
+          <div class="feature-icon">📈</div>
+          <h3>Auto-progression</h3>
+          <p>LiftForge increases your weights automatically after each successful session. Miss reps — it adjusts.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⏱</div>
+          <h3>Rest timer done right</h3>
+          <p>Background countdown with a notification when it's time to lift again. Never lose track between sets.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🏆</div>
+          <h3>PR tracking</h3>
+          <p>Personal records are detected and celebrated automatically every time you lift a new best.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📝</div>
+          <h3>Session notes</h3>
+          <p>Add notes per exercise or for the whole session. Always saved to history, never lost.</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- PROGRAMS (updated) -->
-      <section class="panel" id="programs">
-        <h2>Programs included</h2>
-        <p style="margin:0; color:var(--muted)">Pick a preset and lift today — every plan is editable.</p>
+    <hr />
 
-        <div class="program-grid" style="margin-top:12px">
-          <div class="program-card">
-            <h3>Beginner 5×5 (3d/week) <span class="pill">Beginner</span></h3>
-            <p>Full-body A/B days that build strength fast with small, steady jumps. The big barbell lifts—squat, press, pull—kept simple so you can focus on form and progress.</p>
-          </div>
+    <section id="programs">
+      <div class="section-label">Programs</div>
+      <h2>Pick a plan and start today.</h2>
+      <p class="section-lead">Every template is editable. Swap exercises, adjust volume, save your own.</p>
+      <div class="programs">
+        <div class="program"><div><span class="prog-badge beg">Beginner</span></div><div><h3>Standard 5×5 (3d/week)</h3><p>Full-body A/B days with automatic weight progression. The classic starting point.</p></div></div>
+        <div class="program"><div><span class="prog-badge int">Intermediate</span></div><div><h3>Upper/Lower 4-day</h3><p>Even volume across upper and lower body with clear strength and size gains.</p></div></div>
+        <div class="program"><div><span class="prog-badge int">Interm./Adv.</span></div><div><h3>5/3/1 Classic (4d)</h3><p>Percent-based strength cycle on the main lifts with BBB accessories.</p></div></div>
+        <div class="program"><div><span class="prog-badge adv">Advanced</span></div><div><h3>UL + PPL Hypertrophy (5d)</h3><p>High-frequency split for fast physique changes. Upper/Lower into Push/Pull/Legs.</p></div></div>
+        <div class="program"><div><span class="prog-badge adv">Advanced</span></div><div><h3>Mixed Strength/Hypertrophy (5d)</h3><p>Heavy compounds, accessories, and a density finisher. Strength you can feel.</p></div></div>
+        <div class="program"><div><span class="prog-badge beg">Beginner</span></div><div><h3>Beginner Machines (3d)</h3><p>Confidence-building sessions on machines. Easy to learn, easy to progress.</p></div></div>
+        <div class="program"><div><span class="prog-badge all">All levels</span></div><div><h3>Calisthenics (3d)</h3><p>Bodyweight push/pull/legs with smart progressions. Minimal equipment needed.</p></div></div>
+        <div class="program"><div><span class="prog-badge all">All levels</span></div><div><h3>Glutes & Core (3d)</h3><p>Hip-dominant strength plus core stability for power and posture.</p></div></div>
+      </div>
+    </section>
 
-          <div class="program-card">
-            <h3>Upper/Lower Balanced (4d) <span class="pill">Intermediate</span></h3>
-            <p>Even coverage for chest, back, legs and core across the week. Moderate volume for clear strength and size gains without burning out.</p>
-          </div>
+    <hr />
 
-          <div class="program-card">
-            <h3>5/3/1 Classic (4d) <span class="pill">Interm./Adv.</span></h3>
-            <p>A proven strength framework on the main lifts, supported by accessories that add muscle and reinforce technique—ideal for long-term PRs.</p>
-          </div>
-
-          <div class="program-card">
-            <h3>UL + Push/Pull/Legs (5d Hypertrophy) <span class="pill">Advanced</span></h3>
-            <p>High-frequency split for fast physique changes. Combines Upper/Lower and PPL to maximize quality weekly sets across all major muscle groups.</p>
-          </div>
-
-          <div class="program-card">
-            <h3>Mixed Strength/Hypertrophy (5d) <span class="pill">Advanced</span></h3>
-            <p>Heavy compound days, higher-rep pump work, and a fast density finisher. Strength you can feel, volume where it counts.</p>
-          </div>
-
-          <div class="program-card">
-            <h3>Beginner Machines (3d) <span class="pill">Beginner</span></h3>
-            <p>Confidence-building full-body sessions on machines. Easy to learn, easy to progress—perfect if you’re new or returning to training.</p>
-          </div>
-
-          <div class="program-card">
-            <h3>Calisthenics Hypertrophy (3d) <span class="pill">All Levels</span></h3>
-            <p>Bodyweight push/pull/legs with smart progressions. Push-ups, dips, pull-ups, rows, lunges and core—build muscle with minimal equipment.</p>
-          </div>
-
-          <div class="program-card">
-            <h3>Glutes & Core (3d) <span class="pill">All Levels</span></h3>
-            <p>Hip-dominant strength plus core stability for power, posture and carryover to every other lift.</p>
+    <section id="pricing">
+      <div class="section-label">Pro</div>
+      <h2>Upgrade when you're ready.</h2>
+      <p class="section-lead">Everything core is free forever. Pro adds the extras for serious training.</p>
+      <div class="pricing-grid">
+        <div class="plan">
+          <div class="plan-name">Free</div>
+          <div class="plan-price">$0 <span>/ forever</span></div>
+          <div class="plan-desc">Everything you need to start and build a real training habit.</div>
+          <ul class="plan-features">
+            <li>All 8 built-in programs</li>
+            <li>Automatic weight progression</li>
+            <li>Rest timer with notifications</li>
+            <li>Session history & progress chart</li>
+            <li>3 saved custom sessions</li>
+            <li class="dim">PR details & history</li>
+            <li class="dim">Export training log</li>
+          </ul>
+          <div class="plan-cta">
+            <a class="btn" href="https://apps.apple.com/no/app/liftforge/id6751549489" style="width:100%;justify-content:center;">Download free</a>
           </div>
         </div>
-
-        <div class="program-foot">
-          Make any plan yours — swap exercises, adjust volume, and save your own templates.
-        </div>
-      </section>
-
-      <!-- SCREENSHOTS -->
-      <section class="panel" id="screenshots">
-        <h2>Screenshots</h2>
-        <div class="screens">
-          <div class="shot"><img src="assets/shots/screenshot-home.jpg" alt="Home showing today's plan and start session" loading="lazy"></div>
-          <div class="shot"><img src="assets/shots/screenshot-session.jpg" alt="Session with weight, reps and rest timer" loading="lazy"></div>
-          <div class="shot"><img src="assets/shots/Screenshot-plan.jpg" alt="View plan" loading="lazy"></div>
-          <div class="shot"><img src="assets/shots/screenshot-progress.jpg" alt="Progress chart" loading="lazy"></div>
-        </div>
-      </section>
-
-      <!-- PRIVACY -->
-      <section class="panel" id="privacy">
-        <h2>Privacy</h2>
-        <p style="margin:0; color:var(--muted)">
-          LiftForge™ stores your data locally on your device. There’s no account and no cloud sync.
-          Delete the app to delete the data. That’s it.
-        </p>
-      </section>
-
-      <!-- FAQ -->
-      <section class="panel" id="faq">
-        <h2>FAQ</h2>
-        <div class="faq">
-          <details><summary>Do I need an account?</summary><p>No. LiftForge works without accounts. Your data stays on your device.</p></details>
-          <details><summary>Does it work offline?</summary><p>Yes. Plans, logging, history and progress work offline.</p></details>
-          <details><summary>Is there a 5×5 program?</summary><p>Yes. Start a StrongLifts-style 5×5 in seconds or build your own plan.</p></details>
-          <details><summary>Does it track progress automatically?</summary><p>Yes. LiftForge keeps a simple training diary, tracks progress on every exercise, and auto-progresses after each completed session.</p></details>
-          <details><summary>Does LiftForge include more than 5×5?</summary><p>Yes. Templates include Upper/Lower (4d), 5/3/1 (4d), Hypertrophy (5d), Calisthenics (3d), Machines (3d) and Glutes & Core (3d).</p></details>
-          <details><summary>How do rest timer notifications work?</summary><p>LiftForge runs a background countdown and notifies you when it's time to lift again.</p></details>
-          <details><summary>What about privacy?</summary><p>Your data stays on your device. Delete the app to delete the data.</p></details>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="panel" id="contact">
-        <h2>Get updates or say hi</h2>
-        <form action="https://formspree.io/f/mbladqen" method="POST" id="contactForm">
-          <div class="row">
-            <input type="email" name="email" placeholder="Email" required autocomplete="email" />
-            <textarea name="message" placeholder="Message (optional)"></textarea>
+        <div class="plan pro">
+          <div class="plan-name">⭐ Pro</div>
+          <div class="plan-price">From <span>$0.99/mo</span></div>
+          <div class="plan-desc">For lifters who want the full picture and unlimited flexibility.</div>
+          <ul class="plan-features">
+            <li>Everything in Free</li>
+            <li>Unlimited saved sessions</li>
+            <li>Full PR tracking & history</li>
+            <li>Export history as CSV</li>
+            <li>Advanced progress charts</li>
+          </ul>
+          <div class="plan-cta">
+            <a class="btn primary" href="https://apps.apple.com/no/app/liftforge/id6751549489" style="width:100%;justify-content:center;">Get Pro</a>
           </div>
-          <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
-            <button class="btn btn-primary" type="submit">Send</button>
-            <div class="success" id="okMsg">Thanks — we’ll be in touch.</div>
-            <div class="error" id="errMsg">Something went wrong. Please try again.</div>
-          </div>
-          <input type="text" name="_gotcha" style="display:none">
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <div class="section-label">Privacy</div>
+      <h2>Your data is yours. Full stop.</h2>
+      <div class="privacy-strip" style="margin-top:28px">
+        <div class="priv-item"><div class="priv-icon">📵</div><div><h3>No account required</h3><p>Open the app and lift. Nothing to sign up for, nothing to log in to.</p></div></div>
+        <div class="priv-item"><div class="priv-icon">📱</div><div><h3>On-device only</h3><p>All data is stored locally on your iPhone. No servers, no cloud sync.</p></div></div>
+        <div class="priv-item"><div class="priv-icon">🗑</div><div><h3>Delete anytime</h3><p>Delete the app to delete all your data. That's it. No hidden copies.</p></div></div>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <div class="section-label">FAQ</div>
+      <h2>Common questions.</h2>
+      <div class="faq" style="margin-top:28px">
+        <details><summary>Do I need an account?</summary><p>No. LiftForge works without any account. Open the app and start lifting. Your data stays on your device.</p></details>
+        <details><summary>Does it work offline?</summary><p>Yes, completely. Plans, logging, history and progress all work without an internet connection.</p></details>
+        <details><summary>How does auto-progression work?</summary><p>After each successful session, LiftForge automatically increases your working weights for the next one. If you miss reps, it adjusts — keeping you progressing without overloading.</p></details>
+        <details><summary>Can I build my own program?</summary><p>Yes. The Program Builder lets you create a custom weekly schedule, add any exercises, and set your own sets, reps and weights. You can also start a blank session and add exercises on the fly.</p></details>
+        <details><summary>How does the rest timer work?</summary><p>The timer runs in the background and sends a push notification when your rest is done — so you can lock your phone and get notified when it's time to lift again.</p></details>
+        <details><summary>What's included in Pro?</summary><p>Pro adds unlimited saved sessions, full PR tracking with details, CSV export of your training history, and advanced progress charts. Everything else — all programs, progression, history, and the rest timer — is free forever.</p></details>
+        <details><summary>What if I switch phones?</summary><p>Export your history as CSV (Pro) before switching. iCloud backup may also restore app data if you restore from a full backup.</p></details>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="contact">
+      <div class="contact-wrap">
+        <div>
+          <div class="section-label">Contact</div>
+          <h2>Get in touch.</h2>
+          <p style="color:var(--muted);font-size:15px;margin-top:12px">Questions, feedback, or just want to say hi — we read every message.</p>
+        </div>
+        <form action="https://formspree.io/f/mbladqen" method="POST">
+          <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" placeholder="Your name" /></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" placeholder="you@email.com" required /></div>
+          <div><label for="message">Message</label><textarea id="message" name="message" placeholder="How can we help?" required></textarea></div>
+          <input type="hidden" name="_subject" value="LiftForge contact" />
+          <input type="hidden" name="_redirect" value="https://liftforge.app/thanks.html" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <button type="submit">Send message</button>
         </form>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <footer>
-      <div>&copy; <span id="year"></span> LiftForge™</div>
-      <div class="small">LiftForge™. All rights reserved.</div>
+      <span>© <span id="y"></span> LiftForge™ · Made for lifters</span>
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="https://apps.apple.com/no/app/liftforge/id6751549489">App Store</a>
+      </div>
     </footer>
   </div>
 
   <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Formspree (AJAX + inline success)
-    const form = document.getElementById('contactForm');
-    const ok = document.getElementById('okMsg');
-    const err = document.getElementById('errMsg');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      try{
-        const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
-        if(res.ok){ ok.style.display='block'; err.style.display='none'; form.reset(); }
-        else { err.style.display='block'; ok.style.display='none'; }
-      }catch{ err.style.display='block'; ok.style.display='none'; }
-    });
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+```
